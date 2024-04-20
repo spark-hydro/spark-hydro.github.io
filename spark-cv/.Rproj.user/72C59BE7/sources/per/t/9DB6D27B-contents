@@ -1,0 +1,1214 @@
+---
+title: "Seonggyu Park's CV"
+date: "Updated `r Sys.Date()`"
+output:
+  pagedown::html_paged:
+    self_contained: false
+    css: [spark-cv.css]
+    number_sections: false
+links-to-footnotes: false
+---
+
+```{r setup, include=FALSE}
+library(lubridate)
+library(knitr)
+library(magrittr) # For the pipe 
+library(dplyr)
+library(purrr)
+library(stringr)
+library(readr)
+library(tidyr)
+
+source("cv_printing_functions.r")
+
+opts_chunk$set(echo = FALSE)
+options(knitr.kable.NA = '')
+
+#### cv entries #####
+cv_entries <- readxl::read_xlsx(here::here("data", "cv_entries.xlsx"))
+research <- readxl::read_xlsx(here::here("data", "research.xlsx"))
+cv2 <- readr::read_csv(here::here("data", "entries.csv"), skip=1)
+
+#### publications #####
+pubs <- readxl::read_xlsx(here::here("data", "pubs.xlsx")) %>% 
+  arrange(order) %>% 
+  select(-order)
+
+pubs <- map_df(pubs, ~gsub("\\.$", "", .x))
+courses <- readxl::read_xlsx(here::here("data", "courses.xlsx"))
+
+```
+
+<!-- function for pub -->
+```{r}
+
+make_cite <- function(authors,	year,	title,	journal = NULL,	volume = NULL,	
+                      issue = NULL,	pages = NULL,	doi = NULL,	url = NULL,
+                      book = NULL, place_published = NULL, conference = NULL,
+                      poster = NULL, conf_loc = NULL, annual_meeting = NULL,
+                      version = NULL,...) {
+  
+  if(!is.null(journal)) {
+    journal <- paste0("*", journal, "*.")
+  }
+  if(!is.null(volume)) {
+    volume <- paste0("*", volume, "*,")
+  }
+  if(!is.null(issue)) {
+    volume <- paste0(gsub(",", "", volume), " (", issue,"),")
+  }
+  if(!is.null(doi) & !is.null(url)) {
+    doi <- paste0('[<i class="ai location ai-doi ai-lg"></i>',doi,'](',url, ')')
+    # doi <- paste0('[<i class="ai ai-doi ai-lg"></i>',doi,'](',url, ')')
+  }
+
+  if(!is.null(pages)) {
+    if(!is.null(book)) {
+      pages <- paste0("(pp. ", pages, ").")
+    }
+    else {
+     pages <- paste0(pages,".") 
+    }
+  }
+  if(!is.null(book)) {
+    book <- paste0("*", book, "*")
+  }
+  if(!is.null(conference)) {
+    title <- paste0("*", title, "*")
+    if(is.null(poster)) {
+      if(annual_meeting) {
+        conference <- paste0("Presentation at the annual ", conference, ".")
+      }
+      else {
+        conference <- paste0("Presentation at the ", conference, ".")
+      }
+    }
+    else if(poster) {
+      if(annual_meeting) {
+       conference <- paste0("Poster presented at the annual meeting of the ", 
+                            conference,
+                            ",", 
+                            "<i class='fas location fa-map-marker-alt'></i>",                             
+                            # "<span style='color:#a3c3d9;margin-left:1.5em;margin-right:-0.5em'><i class='fas fa-map-marker-alt'></i></span>", 
+                            conf_loc,
+                            ".") 
+      }
+      else {
+        conference <- paste0("Poster presented at the ", 
+                             conference, 
+                            ",", 
+                            "<i class='fas location fa-map-marker-alt'></i>",
+                            conf_loc,
+                            ".") 
+      }
+    }
+    else {
+       if(annual_meeting) {
+          conference <- paste0("at the annual meeting of the ", 
+                            conference, 
+                            ", ", 
+                            "<i class='fas location fa-map-marker-alt'></i>",
+                            conf_loc,
+                            ".") 
+      }
+      else {
+        conference <- paste0(
+                            "at the ", 
+                            conference,
+                            ",",
+                            "<i class='fas location fa-map-marker-alt'></i>",
+                            conf_loc,
+                            ".") 
+      }
+    }
+
+  }
+  if(!is.null(version)) {
+    version <- paste0("R package version ", version, ".")
+  }
+  authors <- gsub(
+    "Park, S\\.?",
+    "<span style= 'font-weight: 500'>Park, S.</span>", 
+    authors)
+   
+  paste(authors, 
+        paste0("(", year, ")."), 
+        paste0(title, ", "),
+        version, 
+        conference,
+        journal, 
+        volume,
+        book,
+        pages, 
+        doi,
+        place_published)
+}
+```
+
+```{r}
+PDF <- FALSE # Set to TRUE when rendering to PDF via pagedown::chrome_print('spark-cv.Rmd', 'spark-cv.pdf')
+if(PDF) {
+  header <- '
+  <a href="#toc" class="icon-block2">
+      <i class="fas fafooter fa-chevron-up"></i>
+  </a>
+  '
+} else {
+  header <- '
+  <a href="#toc" class="icon-block2">
+      <i class="fas fafooter fa-chevron-up"></i>
+  </a>
+  '
+}
+
+```
+
+
+
+<div class = "download">
+```{r results = "asis"}
+cat(header)
+```
+
+</div>
+
+
+
+<div class = "footer",>
+  <a href="https://github.com/spark-brc" class="icon-block">
+      <i class="fab fafooter fa-github"> &ensp; | </i>
+  </a>
+  
+  <a href="mailto:seonggyu.park@brc.tamus.edu" class="icon-block">
+      <i class="fas fafooter fa-envelope"> &ensp;| </i>
+  </a>
+  
+  <a href="https://blackland.tamu.edu/people/research/scientists/park-seonggyu/" class="icon-block">
+      <i class="fas fafooter fa-globe"> &ensp;| </i>
+  </a>
+  
+  <a href="https://twitter.com/spark_brc" class="icon-block">
+      <i class="fab fafooter fa-twitter"> &ensp;| </i>
+  </a>
+  
+  <a href="https://scholar.google.com/citations?user=5Ob9lioAAAAJ&hl=en" class="icon-block">
+      <i class="ai fafooter ai-google-scholar ai-lg"></i>
+  </a>
+  
+</div>
+
+
+<div class="wrapper">
+
+<div class="item1">
+<div id = "block_container">
+<div class = "first", id="bloc1">Seonggyu</div>
+<div class = "last", id="bloc2">Park</div>
+</div>
+</div>
+
+<div class="item2">
+<div id = "block_container">
+<div class = "first2", id="bloc1">Assistant Research</div>
+<div class = "last2", id="bloc2">Scientist</div>
+</div>
+</div>
+
+<!-- Online -->
+<div class="item3">
+<a href="https://github.com/spark-brc/spark-brc.github.io/raw/master/spark-cv/spark-cv.pdf" class="icon-block">
+<img class="top_aligned_image" src="cv_pdf.svg">
+<span class="caption">DOWNLOAD PDF</span>
+</a>
+</div>
+
+<!-- PDF -->
+<!-- <div class="item3"> -->
+<!-- <a href="https://spark-brc.github.io/spark-cv/" class="icon-block"> -->
+<!-- <img class="top_aligned_image" src="cv_online.svg"> -->
+<!-- <span class="caption">VIEW ONLINE</span> -->
+<!-- </a> -->
+<!-- </div> -->
+
+</div>
+
+
+<div id = "sub", class = "sub">
+<div id = "block_container">
+<div class = "sub_first", id="bloc1">Curriculum</div>
+<div class = "sub_last", id="bloc2">Vita</div>
+</div>
+</div>
+
+
+
+<div class="grid-container">
+
+```{r summary, child = here::here("content", "summary.Rmd")}
+```
+
+```{r contact-info, child = here::here("content", "contact-info.Rmd")}
+```
+
+</div>
+<br>
+
+
+<div id = "toc", class = "toc">Table of Contents
+</div>
+
+<div class="tlist">
+- [Education]
+- [Brief professional history]
+- [Research Experience]
+  - [Model Applications]
+  - [Model Development]
+  - [Software Development]
+  - [Web Applications]
+  - [Peer-Reviewed Publications]
+  - [Technical Reports]
+  - [Training Manuals]
+  - [National & International Conference Presentations]
+- [Funding Activity]
+- [Professional Service]
+  - [Workshops delivered]
+  - [Invited Talks]
+  - [Journal issues edited]
+- [Teaching]
+- [Fellowships & Awards]
+- [Professional Affiliations]
+</div>
+
+
+<br class="pageBreak"/>
+
+
+
+## Education {.education .nohead}
+```{r}
+cv_entries %>% 
+  filter(type == 'education') %>%
+  mutate(
+    loc = ifelse(!is.na(loc),
+                paste0("<i class='fas location fa-map-marker-alt'></i>", loc),
+                ""),
+    what = paste0(what, ". ", where, ", ", loc),
+    what = gsub("NA", "", what),
+    what = gsub(", $", "", what),
+    what = ifelse(!is.na(url), 
+                paste0("[", what, "](", url, ")"), 
+                what)
+         ) %>% 
+  mutate(year = str_c(year_begin, " --- ", year_end)) %>% 
+  select(year, what) %>% 
+  kable()
+```
+
+<br>
+<br>
+
+## Brief professional history {.history .nohead}
+```{r}
+cv_entries %>% 
+  filter(type == 'history') %>% 
+  mutate(
+    loc = ifelse(!is.na(loc),
+                paste0("<i class='fas location fa-map-marker-alt'></i>", loc),
+                ""),    
+    what = paste0("<span style= 'font-weight: 500'>",
+                       what, 
+                       "</span>"),
+    what = paste0(what, ", ", where, ", ", loc),
+         what = gsub("NA", "", what),
+         what = gsub(", $", "", what)) %>% 
+  mutate(year = str_c(year_begin, 
+                      " --- ", 
+                      ifelse(is.na(year_end), "", year_end))) %>% 
+  select(year, what) %>% 
+  kable()
+
+```
+<br class="pageBreak"/>
+
+# Research Experience
+<div class = "inote">
+Icons link to additional content  
+</div>
+
+I actively contribute to developing and enhancing hydrological models and software, engaging with the model and Python [communities](https://groups.google.com/g/swat-modflow). I maintain and support these tools, and below is an overview of my authored and contributed packages, along with interactive data applications.
+
+## Model Applications {.submitted .nohead}
+
+<div class = "hangingindent">
+
+```{r}
+
+rs <- research %>%
+  filter(type == "ma") %>%
+  # arrange(order) %>%
+  select(-type)
+
+fa_web = ifelse(!is.na(rs$website),
+                paste0('<a href="', rs$website, '"><i class="fas falink fa-globe"></i></a>'),
+                "")
+fa_git = ifelse(!is.na(rs$repo),
+                paste0('<a href="', rs$repo, '"><i class="fab falink fa-github"></i></a>'),
+                "")
+fa_youtube = ifelse(!is.na(rs$youtube),
+                    paste0('<a href="', rs$youtube, '"><i class="fas falink fa-youtube"></i></a>'),
+                    "")
+tool = ifelse(!is.na(rs$tool),
+              paste0("<span class='background'>", rs$tool, "</span>"),
+              "")
+year = str_c(rs$year_begin,
+              " --- ",
+              ifelse(is.na(rs$year_end), "current", rs$year_end))
+what = paste0(rs$what, ", ", "(", year, "). ", tool, fa_git, fa_web, fa_youtube)
+what = gsub("NA, ", "", what)
+order = paste0(rs$order, ".")
+point = rs$point
+ma_tbl <- tibble(point = paste(point),
+    what = paste0(what))
+
+order = rs$order
+ma_tbl <- ma_tbl %>%
+  arrange(order)
+
+kable(ma_tbl)
+```
+
+</div>
+
+## Model Development {.submitted .nohead}
+
+<div class = "hangingindent">
+
+```{r}
+rs <- research %>% 
+  filter(type == "md") %>% 
+  select(-type)
+
+fa_web = ifelse(!is.na(rs$website), 
+                paste0( '<a href=', 
+                        rs$website, 
+                        '><i class="fas falink fa-globe"></i></a>'),
+                "")
+fa_git = ifelse(!is.na(rs$repo), 
+                paste0('<a href=', 
+                      rs$repo, 
+                      '><i class="fab falink fa-github"></i></a>'),
+                "")
+fa_youtube = ifelse(!is.na(rs$youtube), 
+                paste0('<a href=', 
+                      rs$youtube, 
+                      '><i class="fab fa-youtube"></i></a>'),
+                "")
+product = ifelse(!is.na(rs$product),
+              paste0(
+                "<span class='pbackground'>",
+                rs$product,
+                "</span>"
+                ),
+                "")
+tool = ifelse(!is.na(rs$tool),
+              paste0(
+                "<span class='background'>",
+                rs$tool,
+                "</span>"
+                ),
+                "")
+
+authors <- gsub(
+  "Park, S\\.?",
+  "<span style= 'font-weight: 500'>Park, S.</span>", 
+  rs$authors)
+year = str_c(
+            ifelse(is.na(rs$year_end), paste0(rs$year_begin, "---", "current"), rs$year_end))
+# what = paste0(authors, what, ", ", "(",  year, "). ", product, " ", tool, 
+#                 fa_git, fa_web, fa_youtube),
+what = paste0(authors, " (",  year, "). ", product, ": ", rs$what,   " ", tool, 
+                fa_git, fa_web, fa_youtube)
+what = gsub("NA, ", "", what)
+order = rs$order
+# order = paste0(rs$order, ".")
+count = paste0(seq(length(order), 1), ".")
+
+md_tbl <- tibble(count,
+                what)
+
+md_tbl <- md_tbl %>%
+  arrange(order)
+
+# select(count, what) %>% 
+kable(md_tbl[1:3, ])
+
+```
+</div>
+
+<!-- <br class="pageBreak"/> -->
+
+<div class = "hangingindent">
+```{r}
+kable(md_tbl[4:nrow(md_tbl), ])
+```
+</div>
+
+
+
+## Software Development {.submitted .nohead}
+
+<div class = "hangingindent">
+
+```{r}
+rs <- research %>% 
+  filter(type == "sd") %>% 
+  select(-type)
+
+  # if(!is.null(doi) & !is.null(url)) {
+  #   doi <- paste0('[<i class="ai location ai-doi ai-lg"></i>',doi,'](',url, ')')
+  #   # doi <- paste0('[<i class="ai ai-doi ai-lg"></i>',doi,'](',url, ')')
+  # }
+
+fa_web = ifelse(!is.na(rs$website), 
+                paste0( '<a href=', 
+                        rs$website, 
+                        '><i class="fas falink fa-globe"></i></a>'),
+                "")
+fa_git = ifelse(!is.na(rs$repo), 
+                paste0('<a href=', 
+                      rs$repo, 
+                      '><i class="fab falink fa-github"></i></a>'),
+                "")
+fa_youtube = ifelse(!is.na(rs$youtube), 
+                paste0('<a href=', 
+                      rs$youtube, 
+                      '><i class="fab falink fa-youtube"></i></a>'),
+                "")
+product = ifelse(!is.na(rs$product),
+              paste0(
+                "<span class='pbackground'>",
+                rs$product,
+                "</span>"
+                ),
+                "")
+tool = ifelse(!is.na(rs$tool),
+              paste0(
+                "<span class='background'>",
+                rs$tool,
+                "</span>"
+                ),
+                "")
+doi = ifelse(!is.na(rs$doi),
+              paste0(
+              '[<i class="ai location ai-doi ai-lg"></i>',rs$doi,'](',rs$url, ')'
+                ),
+                "")
+# doi = ifelse(!is.na(doi),
+#               paste0('<a href=',
+#                     url, 
+#                     '><i class="fab falink fa-youtube"></i></a>'),
+#                 ""),
+
+
+authors <- gsub(
+  "Park, S\\.?",
+  "<span style= 'font-weight: 500'>Park, S.</span>", 
+  rs$authors)
+year = str_c(
+            ifelse(is.na(rs$year_end), paste0(rs$year_begin, "---", "current"), rs$year_end))
+# what = paste0(authors, what, ", ", "(",  year, "). ", product, " ", tool, 
+#                 fa_git, fa_web, fa_youtube),
+what = paste0(authors, " (", year, "). ", product, ": ",rs$what,   " ", tool, 
+                fa_git, fa_web, fa_youtube, doi)
+what = gsub("NA, ", "", what)
+order = rs$order
+# order = paste0(order, "."),
+count = paste0(seq(length(rs$order), 1), ".")
+
+sd_tbl <- tibble(count,
+                what)
+
+sd_tbl <- sd_tbl %>%
+  arrange(order)
+
+
+kable(sd_tbl)
+# <br class="pageBreak"/>
+```
+
+</div>
+
+## Web applications {.submitted .nohead}
+
+<div class = "hangingindent">
+
+```{r}
+  research %>% 
+  filter(type == "wa") %>% 
+  arrange(order) %>% 
+  mutate(fa_web = ifelse(!is.na(website), 
+                          paste0( '<a href=', 
+                                  website, 
+                                  '><i class="fas falink fa-globe"></i></a>'),
+                          ""),
+          fa_git = ifelse(!is.na(repo), 
+                          paste0('<a href=', 
+                                repo, 
+                                '><i class="fab falink fa-github"></i></a>'),
+                          ""),
+          fa_youtube = ifelse(!is.na(youtube), 
+                          paste0('<a href=', 
+                                youtube, 
+                                '><i class="fab falink fa-youtube"></i></a>'),
+                          ""),
+          tool = ifelse(!is.na(tool),
+                        paste0(
+                          # "<span style='background-color:#a3c4da; color:white;border-radius:4px; padding-right:2px;padding-left:2px;'>"
+                          "<span class='background'>",
+                          tool,
+                          "</span>"
+                          ),
+                          ""),
+          authors <- gsub(
+            "Park, S\\.?",
+            "<span style= 'font-weight: 500'>Park, S.</span>", 
+            authors),
+          year = str_c(
+                      ifelse(is.na(year_end), paste0(year_begin, "---", "current"), year_end)),
+          # what = paste0(authors, what, ", ", "(",  year, "). ", product, " ", tool, 
+          #                 fa_git, fa_web, fa_youtube),
+          what = paste0(authors, " (",  year, "). ",what,   " ", tool, 
+                          fa_git, fa_web, fa_youtube),
+          what = gsub("NA, ", "", what),
+          order = paste0(order, "."),
+          count = paste0(seq(length(order), 1), ".")
+          
+          ) %>% 
+  select(count, what) %>% 
+  kable()
+```
+</div>
+<!-- <br> -->
+
+<!-- <br> -->
+<br class="pageBreak"/>
+</div>
+
+## Peer-Reviewed Publications
+
+```{r}
+prpas <- pubs %>%
+  filter(type == "prpa") %>%
+  select(-type)
+
+each_cite <- split(prpas, seq_len(nrow(prpas)))
+empties <- map(each_cite, ~map_lgl(.x, is.na))
+
+cites <- map2(each_cite, empties, ~.x[ ,!.y])
+formatted_cites <- map(cites, ~do.call(make_cite, .x))
+
+fa_doc <- ifelse(
+  !is.na(prpas$full_paper_link),
+  paste0('[<i class="fas falink2 fa-file-alt"></i>](',
+         prpas$full_paper_link,
+         ")"
+         ),
+  ""
+  )
+
+fa_git <- ifelse(
+  !is.na(prpas$git_repo),
+  paste0('[<i class="fab falink2 fa-github"></i>](',
+         prpas$git_repo,
+         ")"
+         ),
+  ""
+  )
+
+pubs_tbl <- tibble(year = prpas$year,
+                  count = paste0(seq(length(formatted_cites), 1), "."),
+                  cites = paste(unlist(formatted_cites), fa_doc, fa_git))
+
+pubs_tbl <- pubs_tbl %>%
+  group_by(year) %>%
+  mutate(count_within_year = 1:n()) %>%
+  ungroup() %>%
+  mutate(year = ifelse(count_within_year == 1, year, "")) %>%
+  select(-count_within_year)
+```
+
+<div class = "hangingindent prpa nohead">
+
+```{r} 
+kable(pubs_tbl[1:9, ])
+```
+
+</div>
+<br class="pageBreak"/>
+<div class = "hangingindent prpa nohead">
+
+```{r} 
+kable(pubs_tbl[10:18, ])
+```
+</div>
+
+
+<br class="pageBreak">
+<div class = "hangingindent prpa nohead">
+
+```{r} 
+kable(pubs_tbl[19:nrow(pubs_tbl), ])
+```
+
+</div>
+<br>
+
+## Technical Reports {.submitted .nohead}
+
+<div class = "hangingindent">
+
+```{r }
+submitted <- pubs %>% 
+  filter(type == "technical_report") %>% 
+  select(-type)
+
+fa_web = ifelse(
+  !is.na(submitted$url), 
+  paste0(
+    '[<i class="fas falink fa-globe"></i>](',
+    submitted$url,
+    ")"),
+    "")
+
+# falink makes gray
+fa_doc <- ifelse(
+  !is.na(submitted$full_paper_link), 
+  paste0('[<i class="fas falink fa-file-alt"></i>](', 
+         submitted$full_paper_link, 
+         ")"
+         ),
+  ""
+  )
+
+fa_git <- ifelse(
+  !is.na(submitted$git_repo), 
+  paste0('[<i class="fab falink fa-github"></i>](', 
+         submitted$git_repo, 
+         ")"
+         ),
+  ""
+  )
+
+each_cite <- split(submitted, seq_len(nrow(submitted)))
+empties <- map(each_cite, ~map_lgl(.x, is.na))
+
+cites <- map2(each_cite, empties, ~.x[ ,!.y])
+formatted_cites <- map(cites, ~do.call(make_cite, .x)) 
+
+if(length(formatted_cites) > 0) {
+ submitted_tbl <- tibble(count = paste0(seq(length(formatted_cites), 1), "."),
+                         cites = paste(unlist(formatted_cites), fa_web, fa_doc, fa_git)) 
+  
+  kable(submitted_tbl) 
+}
+```
+
+</div>
+
+
+## Training Manuals {.submitted .nohead}
+
+<div class = "hangingindent">
+
+```{r }
+submitted <- pubs %>% 
+  filter(type == "manual") %>% 
+  select(-type)
+
+fa_web = ifelse(
+  !is.na(submitted$url), 
+  paste0(
+    '[<i class="fas falink fa-globe"></i>](',
+    submitted$url,
+    ")"),
+    "")
+
+# falink makes gray
+fa_doc <- ifelse(
+  !is.na(submitted$full_paper_link), 
+  paste0('[<i class="fas falink fa-file-alt"></i>](', 
+         submitted$full_paper_link, 
+         ")"
+         ),
+  ""
+  )
+
+fa_git <- ifelse(
+  !is.na(submitted$git_repo), 
+  paste0('[<i class="fab falink fa-github"></i>](', 
+         submitted$git_repo, 
+         ")"
+         ),
+  ""
+  )
+
+each_cite <- split(submitted, seq_len(nrow(submitted)))
+empties <- map(each_cite, ~map_lgl(.x, is.na))
+
+cites <- map2(each_cite, empties, ~.x[ ,!.y])
+formatted_cites <- map(cites, ~do.call(make_cite, .x)) 
+
+if(length(formatted_cites) > 0) {
+ submitted_tbl <- tibble(count = paste0(seq(length(formatted_cites), 1), "."),
+                         cites = paste(unlist(formatted_cites), fa_web, fa_doc, fa_git)) 
+  
+  kable(submitted_tbl) 
+}
+```
+
+</div>
+
+
+
+<br class="pageBreak"/>
+
+
+## National & International Conference Presentations {.prpa .nohead}
+
+<div class = "hangingindent">
+
+```{r}
+confs <- pubs %>% 
+  filter(type == "conference") %>% 
+  select(-type)
+
+fa_doc <- ifelse(
+  !is.na(confs$full_paper_link), 
+  paste0('[<i class="fas falink fa-file-alt"></i>](', 
+         confs$full_paper_link, 
+         ")"
+         ),
+  ""
+  )
+
+fa_youtube = ifelse(!is.na(confs$youtube), 
+                paste0('<a href=', 
+                      confs$youtube, 
+                      '><i class="fab falink fa-youtube"></i></a>'),
+                "")
+
+fa_git <- ifelse(
+  !is.na(confs$git_repo), 
+  paste0('[<i class="fab falink2 fa-github"></i>](', 
+         confs$git_repo, 
+         ")"
+         ),
+  ""
+  )
+
+fa_pres <- ifelse(
+  !is.na(confs$slides_link), 
+  paste0('[<i class="fas falink fa-chalkboard-teacher"></i>](', 
+         confs$slides_link, 
+         ")"
+         ),
+  ""
+  )
+
+each_cite <- split(confs, seq_len(nrow(confs)))
+empties <- map(each_cite, ~map_lgl(.x, is.na))
+
+cites <- map2(each_cite, empties, ~.x[ ,!.y])
+formatted_cites <- map(cites, ~do.call(make_cite, .x)) 
+
+conf_tbl <- tibble(year = confs$year,
+                   count = paste0(seq(length(formatted_cites), 1), "."),
+                   cites = paste(unlist(formatted_cites), 
+                                 fa_doc, 
+                                 fa_pres, 
+                                 fa_git,
+                                 fa_youtube)
+)
+  
+
+conf_tbl <- conf_tbl %>% 
+  mutate(year = parse_number(year)) %>% 
+  group_by(year) %>%
+  mutate(count_within_year = 1:n()) %>% 
+  ungroup() %>% 
+  mutate(year = ifelse(count_within_year == 1, year, "")) %>% 
+  select(-count_within_year)
+
+kable(conf_tbl[1:10, ])
+```
+
+</div>
+
+<br class="pageBreak">
+<div class = "hangingindent prpa nohead">
+
+```{r}
+kable(conf_tbl[11:21, ])
+```
+
+</div>
+
+<br class="pageBreak">
+<div class = "hangingindent prpa nohead">
+
+```{r}
+kable(conf_tbl[22:nrow(conf_tbl), ])
+```
+
+</div>
+<br class="pageBreak">
+
+# Funding Activity
+
+<div class = "inote">
+Icons link to additional content
+</div>
+
+```{r}
+grants <- readxl::read_xlsx(here::here("data", "grants.xlsx"))
+
+make_grant_cite <- function(title, funding_agency, award_num, role, pi,
+  date_start, date_end, budget, fte_low_range, fte_high_range, contract,
+  link, in_review = FALSE, ...) {
+
+  if(in_review) {
+    budg <- paste0(". Proposed budget: $",
+                   prettyNum(budget, big.mark = ",")
+                   )
+  } else {
+    budg <- paste0(". Total budget: $",
+                    prettyNum(budget, big.mark = ",")
+                    )
+  }
+  funder <- paste0("*", funding_agency, "* ")
+  if(!is.na(award_num)) {
+    funder <- paste0(funder, " (Award #", award_num, ")")
+  }
+  if(fte_low_range != fte_high_range) {
+    fte <- paste0("FTE: ",
+                  format(fte_low_range, nsmall = 2),
+                  " to ",
+                  format(fte_high_range, nsmall = 2),
+                  " across project years.")
+  }
+  else {
+    fte <- paste0("FTE: ", format(fte_low_range, nsmall = 2), ".")
+  }
+
+  cite <- paste0(paste0(title, ". "),
+                 paste(month(date_start, label = TRUE, abbr = FALSE),
+                       year(date_start),
+                       "to",
+                       month(date_end, label = TRUE, abbr = FALSE),
+                       year(date_end)),
+                 ". ", funder,
+                 budg,
+                 paste0(". ",
+                        "<span style= 'font-weight: 500'> Role: </span>",
+                        role,
+                        ". ")
+                )
+  cite <- ifelse(!is.na(pi),
+                 paste0(cite, " PI: ", pi, "."),
+                 cite)
+  icon <- ifelse(!is.na(link),
+                 paste('<a href=',
+                       link,
+                       '><i class="fas falink2 fa-globe"></i></a>'),
+                 "")
+  paste(cite, fte, icon)
+}
+```
+
+## Under review {.nohead .submitted}
+
+<div class = "hangingindent">
+
+```{r}
+grants_submitted <- grants %>%
+  filter(type == "in-review") %>%
+  group_by(count = paste0(seq(1, nrow(.)), ".")) %>%
+  nest() %>%
+  mutate(cite  = map(data, ~do.call(make_grant_cite, .x))) %>%
+  select(-data) %>%
+  unnest(cite)
+
+kable(grants_submitted[1:2, ])
+```
+
+</div>
+
+<!-- <br class = "pageBreak"/> -->
+
+## Current projects {.nohead .submitted}
+
+<div class = "hangingindent">
+
+```{r}
+grants %>%
+  filter(type == "current") %>%
+  group_by(count = paste0(seq(1, nrow(.)), ".")) %>%
+  nest() %>%
+  mutate(cite  = map(data, ~do.call(make_grant_cite, .x))) %>%
+  select(-data) %>%
+  unnest(cite) %>%
+  kable()
+```
+
+</div>
+
+<!-- <br class="pageBreak"/> -->
+
+## Completed projects {.nohead .submitted}
+
+<div class = "hangingindent">
+
+```{r}
+grants %>%
+  filter(type == "completed") %>%
+  group_by(count = paste0(seq(1, nrow(.)), ".")) %>%
+  nest() %>%
+  mutate(cite  = map(data, ~do.call(make_grant_cite, .x))) %>%
+  select(-data) %>%
+  unnest(cite) %>%
+  kable()
+```
+
+</div>
+
+<br class = "pageBreak"/>
+
+<!-- ## Submitted (unfunded) {.nohead .submitted} -->
+
+<!-- Only applications submitted as Principal Investigator to national agencies are displayed. -->
+
+
+<!-- ```{r} -->
+<!-- rejected <- grants %>% -->
+<!--   filter(type == "rejected") %>% -->
+<!--   group_by(count = paste0(seq(1, nrow(.)), ".")) %>% -->
+<!--   nest() %>% -->
+<!--   mutate(cite  = map(data, ~do.call(make_grant_cite, .x))) %>% -->
+<!--   select(-data) %>% -->
+<!--   unnest(cite) -->
+<!-- ``` -->
+
+<!-- <div class = "hangingindent"> -->
+<!-- ```{r } -->
+<!-- kable(rejected) -->
+<!-- ``` -->
+<!-- </div> -->
+
+
+# Professional Service 
+## Workshops delivered{.nohead .submitted}
+
+<div class = "hangingindent">
+
+```{r}
+workshops <- cv_entries %>%
+  filter(type == "workshop-delivered")
+
+workshops %>%
+  mutate(
+    loc = ifelse(!is.na(loc),
+                paste0("<i class='fas location fa-map-marker-alt'></i>", loc),
+                ""),
+    pps = ifelse(!is.na(participants),
+                paste0("<i class='fas location fa-users'></i>", " number of attendees: ", participants),
+                ""),
+
+    count = paste0(seq(nrow(.), 1), "."),
+          cite = paste0(paste0(what, ", ", pps), 
+                        ", (", 
+                        year_end, 
+                        "). ",
+                        paste0("*", where, "*"), ",", loc, ".")) %>%
+  select(count, cite) %>%
+  kable()
+```
+
+</div>
+
+## Invited talks{.nohead .submitted}
+<div class = "hangingindent">
+
+```{r}
+talks <- cv_entries %>%
+  filter(type == "invited-talks")
+
+talks %>%
+  mutate(
+    loc = ifelse(!is.na(loc),
+                paste0("<i class='fas location fa-map-marker-alt'></i>", loc),
+                ""),    
+    
+    count = paste0(seq(nrow(.), 1), "."),
+          cite = paste0(paste0(what),
+                        ", (", 
+                        year_end, 
+                        "). ",
+                        paste0("*", where, "*"), ",", loc, ".")) %>%
+  select(count, cite) %>%
+  kable()
+```
+</div>
+<br class = "pageBreak"/>
+
+
+# Teaching
+
+<div class = "inote">
+Icons link to additional content  
+</div>
+
+## Graduate Student Committee Involvement {.history .nohead}
+
+```{r}
+cv_entries %>% 
+  filter(type == 'committee') %>% 
+  mutate(
+    loc = ifelse(!is.na(loc),
+                paste0("<i class='fas location fa-map-marker-alt'></i>", loc),
+                ""),    
+    what = paste0("<span style= 'font-weight: 500'>",
+                       what, 
+                       "</span>"),
+    what = paste0(what, ", ", where, ", ", loc),
+         what = gsub("NA", "", what),
+         what = gsub(", $", "", what)) %>% 
+  mutate(year = str_c(year_begin, 
+                      " --- ", 
+                      ifelse(is.na(year_end), "", year_end))) %>% 
+  select(year, what) %>% 
+  kable()
+```
+
+
+
+## Related experience{.nohead .tch}
+
+```{r}
+research %>% 
+  filter(type == "teaching") %>% 
+  arrange(order) %>% 
+  mutate(fa_web = ifelse(!is.na(website), 
+                          paste0( '<a href=', 
+                                  website, 
+                                  '><i class="fas falink fa-globe"></i></a>'),
+                          ""),
+          fa_git = ifelse(!is.na(repo), 
+                          paste0('<a href=', 
+                                repo, 
+                                '><i class="fab falink fa-github"></i></a>'),
+                          ""),
+          fa_youtube = ifelse(!is.na(youtube), 
+                          paste0('<a href=', 
+                                youtube, 
+                                '><i class="fab fa-youtube"></i></a>'),
+                          ""),
+          tool = ifelse(!is.na(tool),
+                        paste0(
+                          "<i class='background'>",
+                          tool,
+                          "</i>"
+                          ),
+                          ""),
+          year = str_c(year_begin, 
+                      " --- ", 
+                      ifelse(is.na(year_end), "current", year_end)),
+          what = paste0(what, ". ", "(",  year, "). ", tool, 
+                          fa_git, fa_web, fa_youtube),
+          what = gsub("NA, ", "", what),
+          order = paste0(order, ".")
+          ) %>% 
+  select(point, what) %>% 
+  kable()
+```
+
+
+
+## Journal issues edited {.history .nohead}
+<!-- <div class = "hangingindent"> -->
+
+```{r}
+cv_entries %>% 
+  filter(type == 'editor') %>% 
+  mutate(
+    loc = ifelse(!is.na(loc),
+                paste0("<i class='fas location fa-map-marker-alt'></i>", loc),
+                ""),    
+    what = paste0("<span style= 'font-weight: 500'>",
+                       what, 
+                       "</span>"),
+    what = paste0(what, ", ", where, ", ", loc),
+         what = gsub("NA", "", what),
+         what = gsub(", $", "", what)) %>% 
+  mutate(year = str_c(year_begin, 
+                      " --- ", 
+                      ifelse(is.na(year_end), "", year_end))) %>% 
+  select(year, what) %>% 
+  kable()
+
+```
+<!-- </div> -->
+
+<!-- <br class="pageBreak"/> -->
+<br>
+
+# Fellowships & Awards {.submitted .nohead}
+
+<div class = "hangingindent">
+
+```{r}
+cv_entries %>%
+  filter(type == "award") %>%
+  mutate(count = paste0(seq(nrow(.), 1), "."),
+         cite = paste0(what, ", ", where,  ", ", (ifelse(!is.na(additional_info), 
+                              paste0("$", additional_info, ","),
+                              "")), " (", year_end, "). ")
+        ) %>%
+  select(count, cite) %>%
+  kable()
+```
+</div>
+
+
+# Professional Affiliations {.submitted .nohead}
+
+<div class="hangingindent prof">
+
+```{r}
+cv_entries %>%
+  filter(type == "affiliation") %>%
+  mutate(count = paste0(seq(nrow(.), 1), ".")) %>%
+  select(count, what) %>%
+  kable()
+```
+</div>
+
+
+
+
+```{r}
+# viewer <- getOption("viewer") %||% utils::browseURL
+# viewer("spark-cv.html")
+```
+
+
+<!-- {{#use_network_logo}} -->
+<!-- ```{r} -->
+<!-- # Build interactive network of positions colored by section -->
+<!-- # and connected if they occurred in the same year -->
+<!-- datadrivencv::build_network_logo(cv2) -->
+<!-- ``` -->
+<!-- {{/use_network_logo}} -->
+<!-- {{^use_network_logo}} -->
+<!-- <!-- Swap image with your preferred logo -->
+<!-- <!-- ![logo](https://cran.r-project.org/Rlogo.svg){width=100%} -->
+<!-- {{/use_network_logo}} -->

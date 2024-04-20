@@ -1,0 +1,4 @@
+```{block type="col-1 grid-item", echo=TRUE}
+## About Me {.box}
+I am primarily interested in developing hydrologic models to identify challenges in present and future water resources management. I am particularly interested in assessing spatial-temporal patterns of interactions between groundwater and surface water, improving water quality and sanitation in developing countries with severe water shortages, and developing new water conservation technologies regarding water catchment and harvesting systems. I am also a strong proponent of open and reproducible workflows.
+```

@@ -1,0 +1,15 @@
+```{block type='col- grid-item', echo=TRUE}
+## Contact information {.box}
+
+<div class = "info-box">
+| right | right |
+|:------|-----:|
+| <span style="color: #454545"><i class="fas  fa-map-marker-alt"></i></span> [BRC, Texas A&M AgriLife](https://blackland.tamu.edu/) |
+| <span style="color: #454545"><i class="fas  fa-envelope"></i></span> seonggyu.park\@brc.tamus.edu |
+| <span style="color: #454545"><i class="fas  fa-globe"></i></span> [spark](https://blackland.tamu.edu/people/research/scientists/park-seonggyu/) |
+| <span style="color: #454545"><i class="fab  fa-github"></i></span> [Github](https://github.com/spark-brc) |
+| <span style="color: #454545"><i class="fab  fa-twitter"></i></span> [Twitter](https://twitter.com/spark_brc) |
+| <span style="color: #454545"><i class="ai  ai-google-scholar ai-lg"></i></span> [Google Scholar](https://scholar.google.com/citations?user=5Ob9lioAAAAJ&hl=en)
+
+</div>
+```
