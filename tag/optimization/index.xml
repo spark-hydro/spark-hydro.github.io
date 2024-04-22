@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Optimization | Seonggyu Park</title>
+    <link>http://localhost:4321/tag/optimization/</link>
+      <atom:link href="http://localhost:4321/tag/optimization/index.xml" rel="self" type="application/rss+xml" />
+    <description>Optimization</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 31 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:4321/media/icon_hua5ec5d05fe01eb89777e75ead887f60c_69732_512x512_fill_lanczos_center_3.png</url>
+      <title>Optimization</title>
+      <link>http://localhost:4321/tag/optimization/</link>
+    </image>
+    
+    <item>
+      <title>Assessment of Water, Salt, Fire and Land Management in Colorado River Basin using APEX</title>
+      <link>http://localhost:4321/project/2021-01-01-blm/</link>
+      <pubDate>Sun, 31 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/project/2021-01-01-blm/</guid>
+      <description>&lt;p&gt;Assessement of Spatio-Temporal Patterns of Groundwater/Surface Water Interactions and Solute Transports&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Development of DayCent Optimization framework with the Differential Evolution Adaptive Metropolis (DREAM) algorithm</title>
+      <link>http://localhost:4321/project/2023-01-31-daycent/</link>
+      <pubDate>Tue, 31 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/project/2023-01-31-daycent/</guid>
+      <description>&lt;p&gt;Assessement of Spatio-Temporal Patterns of Groundwater/Surface Water Interactions and Solute Transports&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

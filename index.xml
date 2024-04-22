@@ -59,10 +59,19 @@
     </item>
     
     <item>
-      <title>Assessement of Spatio-Temporal Patterns of Groundwater/Surface Water Interactions and Solute Transports</title>
-      <link>http://localhost:4321/project/2023-12-31-blm/</link>
+      <title>Assessment of Water, Salt, Fire and Land Management in Colorado River Basin using APEX</title>
+      <link>http://localhost:4321/project/2021-01-01-blm/</link>
       <pubDate>Sun, 31 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/project/2023-12-31-blm/</guid>
+      <guid>http://localhost:4321/project/2021-01-01-blm/</guid>
+      <description>&lt;p&gt;Assessement of Spatio-Temporal Patterns of Groundwater/Surface Water Interactions and Solute Transports&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Development of a Carbon Dynamics Model for Predicting GHG Emission and Sequestration in Croplands</title>
+      <link>http://localhost:4321/project/2024-01-01-rda-ghg/</link>
+      <pubDate>Sun, 31 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/project/2024-01-01-rda-ghg/</guid>
       <description>&lt;p&gt;Assessement of Spatio-Temporal Patterns of Groundwater/Surface Water Interactions and Solute Transports&lt;/p&gt;
 </description>
     </item>
@@ -119,15 +128,6 @@
       <link>http://localhost:4321/project/2023-01-31-daycent/</link>
       <pubDate>Tue, 31 Jan 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:4321/project/2023-01-31-daycent/</guid>
-      <description>&lt;p&gt;Assessement of Spatio-Temporal Patterns of Groundwater/Surface Water Interactions and Solute Transports&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>SWAT-MODFLOW modeling to support resilient development and return on investment analyses in the Cubango-Okavango River Basin (CORB)</title>
-      <link>http://localhost:4321/project/2021-04-31-okavango/</link>
-      <pubDate>Fri, 30 Apr 2021 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/project/2021-04-31-okavango/</guid>
       <description>&lt;p&gt;Assessement of Spatio-Temporal Patterns of Groundwater/Surface Water Interactions and Solute Transports&lt;/p&gt;
 </description>
     </item>
@@ -254,6 +254,24 @@
     </item>
     
     <item>
+      <title>SWAT-MODFLOW modeling to support resilient development and return on investment analyses in the Cubango-Okavango River Basin (CORB)</title>
+      <link>http://localhost:4321/project/2021-04-31-okavango/</link>
+      <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/project/2021-04-31-okavango/</guid>
+      <description>&lt;p&gt;Assessement of Spatio-Temporal Patterns of Groundwater/Surface Water Interactions and Solute Transports&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Development of python modules for integrated Hydrological Models&#39; parameter estimation and uncertainty analysis</title>
+      <link>http://localhost:4321/project/2020-01-01-swatmf/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/project/2020-01-01-swatmf/</guid>
+      <description>&lt;p&gt;This study introduces a reproducible parameter estimation and uncertainty analysis approach to the highly parameterized and integrated surface water – groundwater model, SWAT-MODFLOW, APEX-MODFLOW-RT3D-Salt models.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Writing technical content in Markdown</title>
       <link>http://localhost:4321/post/writing-technical-content/</link>
       <pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate>
@@ -357,7 +375,7 @@ data.head()
 
 
 
-&lt;div id=&#34;chart-932647158&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-638927514&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -367,7 +385,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-932647158&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-638927514&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
