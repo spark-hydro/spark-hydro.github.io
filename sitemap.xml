@@ -14,15 +14,15 @@
     <lastmod>2024-02-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:4321/publication/2024-02-01-balakrishnan-et-al/</loc>
-    <lastmod>2024-02-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>http://localhost:4321/publication_types/</loc>
     <lastmod>2024-02-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>http://localhost:4321/publication/</loc>
+    <lastmod>2024-02-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:4321/publication/2024-02-01-balakrishnan-et-al/</loc>
     <lastmod>2024-02-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -60,6 +60,10 @@
   </url><url>
     <loc>http://localhost:4321/tag/uncertainty/</loc>
     <lastmod>2023-12-31T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:4321/publication/2023-12-wang_et_al/</loc>
+    <lastmod>2023-12-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>http://localhost:4321/post/blog-with-jupyter/</loc>

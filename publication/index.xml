@@ -13,10 +13,36 @@
     </image>
     
     <item>
-      <title>DayCent-CUTE, A global sensitivity, auto-calibration, and uncertainty analysis tool for DayCent</title>
+      <title>Quantifying climate change impacts on future water resources and salinity transport in a high semi-arid watershed</title>
       <link>http://localhost:4321/publication/2024-02-01-balakrishnan-et-al/</link>
       <pubDate>Thu, 01 Feb 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:4321/publication/2024-02-01-balakrishnan-et-al/</guid>
+      <description>&lt;!-- 
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Create your slides in Markdown - click the &lt;em&gt;Slides&lt;/em&gt; button to check out the example.
+  &lt;/div&gt;
+&lt;/div&gt;
+ --&gt;
+&lt;!-- Add the publication&#39;s **full text** or **supplementary notes** here. You can use rich formatting such as including [code, math, and images](https://docs.hugoblox.com/content/writing-markdown-latex/). --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>DayCent-CUTE - A global sensitivity, auto-calibration, and uncertainty analysis tool for DayCent</title>
+      <link>http://localhost:4321/publication/2023-12-wang_et_al/</link>
+      <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/publication/2023-12-wang_et_al/</guid>
       <description>&lt;!-- 
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
