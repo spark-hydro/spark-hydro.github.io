@@ -376,8 +376,8 @@ ma_tbl <- ma_tbl %>%
 
 kable(ma_tbl)
 ```
-
 </div>
+<br class="pageBreak"/>
 
 ## Model Development {.submitted .nohead}
 
@@ -440,18 +440,13 @@ md_tbl <- md_tbl %>%
   arrange(order)
 
 # select(count, what) %>% 
-kable(md_tbl[1:3, ])
+# kable(md_tbl[1:3, ])
+kable(md_tbl)
 
 ```
 </div>
 
 <!-- <br class="pageBreak"/> -->
-
-<div class = "hangingindent">
-```{r}
-kable(md_tbl[4:nrow(md_tbl), ])
-```
-</div>
 
 
 
@@ -531,11 +526,9 @@ sd_tbl <- tibble(count,
 sd_tbl <- sd_tbl %>%
   arrange(order)
 
-
 kable(sd_tbl)
-# <br class="pageBreak"/>
 ```
-
+<br class="pageBreak"/>
 </div>
 
 ## Web applications {.submitted .nohead}
@@ -586,13 +579,13 @@ kable(sd_tbl)
           ) %>% 
   select(count, what) %>% 
   kable()
+  
 ```
 </div>
 <!-- <br> -->
 
 <!-- <br> -->
-<br class="pageBreak"/>
-</div>
+<!-- <br class="pageBreak"/> -->
 
 ## Peer-Reviewed Publications
 
@@ -640,7 +633,7 @@ pubs_tbl <- pubs_tbl %>%
 <div class = "hangingindent prpa nohead">
 
 ```{r} 
-kable(pubs_tbl[1:9, ])
+kable(pubs_tbl[1:7, ])
 ```
 
 </div>
@@ -648,16 +641,15 @@ kable(pubs_tbl[1:9, ])
 <div class = "hangingindent prpa nohead">
 
 ```{r} 
-kable(pubs_tbl[10:18, ])
+kable(pubs_tbl[8:16, ])
 ```
 </div>
-
 
 <br class="pageBreak">
 <div class = "hangingindent prpa nohead">
 
 ```{r} 
-kable(pubs_tbl[19:nrow(pubs_tbl), ])
+kable(pubs_tbl[17:nrow(pubs_tbl), ])
 ```
 
 </div>
@@ -715,6 +707,7 @@ if(length(formatted_cites) > 0) {
 
 </div>
 
+<br class="pageBreak">
 
 ## Training Manuals {.submitted .nohead}
 
@@ -768,9 +761,9 @@ if(length(formatted_cites) > 0) {
 
 </div>
 
+<br>
 
-
-<br class="pageBreak"/>
+<!-- <br class="pageBreak"/> -->
 
 
 ## National & International Conference Presentations {.prpa .nohead}
@@ -839,7 +832,7 @@ conf_tbl <- conf_tbl %>%
   mutate(year = ifelse(count_within_year == 1, year, "")) %>% 
   select(-count_within_year)
 
-kable(conf_tbl[1:10, ])
+kable(conf_tbl[1:8, ])
 ```
 
 </div>
@@ -848,7 +841,7 @@ kable(conf_tbl[1:10, ])
 <div class = "hangingindent prpa nohead">
 
 ```{r}
-kable(conf_tbl[11:21, ])
+kable(conf_tbl[9:19, ])
 ```
 
 </div>
@@ -857,7 +850,7 @@ kable(conf_tbl[11:21, ])
 <div class = "hangingindent prpa nohead">
 
 ```{r}
-kable(conf_tbl[22:nrow(conf_tbl), ])
+kable(conf_tbl[20:nrow(conf_tbl), ])
 ```
 
 </div>
@@ -1006,6 +999,8 @@ grants %>%
 
 
 # Professional Service 
+<br>
+
 ## Workshops delivered{.nohead .submitted}
 
 <div class = "hangingindent">
@@ -1034,6 +1029,7 @@ workshops %>%
 ```
 
 </div>
+<br>
 
 ## Invited talks{.nohead .submitted}
 <div class = "hangingindent">
@@ -1042,7 +1038,7 @@ workshops %>%
 talks <- cv_entries %>%
   filter(type == "invited-talks")
 
-talks %>%
+talks <- talks %>%
   mutate(
     loc = ifelse(!is.na(loc),
                 paste0("<i class='fas location fa-map-marker-alt'></i>", loc),
@@ -1054,12 +1050,21 @@ talks %>%
                         year_end, 
                         "). ",
                         paste0("*", where, "*"), ",", loc, ".")) %>%
-  select(count, cite) %>%
-  kable()
+  select(count, cite)
 ```
-</div>
-<br class = "pageBreak"/>
+```{r} 
+kable(talks[1:2, ])
+```
+<br class="pageBreak"/>
 
+```{r} 
+kable(talks[3:nrow(talks), ])
+```
+
+
+</div>
+
+<br>
 
 # Teaching
 
