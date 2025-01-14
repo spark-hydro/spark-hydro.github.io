@@ -216,7 +216,7 @@ cat(header)
 
 <!-- Online -->
 <div class="item3">
-<a href="https://github.com/spark-brc/spark-brc.github.io/raw/master/spark-cv/spark-cv.pdf" class="icon-block">
+<a href="https://github.com/spark-brc/spark-brc.github.io/raw/main/spark-cv/spark-cv.pdf" class="icon-block">
 <img class="top_aligned_image" src="cv_pdf.svg">
 <span class="caption">DOWNLOAD PDF</span>
 </a>
