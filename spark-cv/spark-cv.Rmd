@@ -1094,15 +1094,16 @@ cv_entries %>%
   kable()
 ```
 
-
+<br>
 
 ## Related experience{.nohead .tch}
 
 ```{r}
-research %>% 
-  filter(type == "teaching") %>% 
-  arrange(order) %>% 
-  mutate(fa_web = ifelse(!is.na(website), 
+tc <- research %>% 
+  filter(type == "teaching")
+tc <- tc %>%
+  mutate(
+          fa_web = ifelse(!is.na(website), 
                           paste0( '<a href=', 
                                   website, 
                                   '><i class="fas falink fa-globe"></i></a>'),
@@ -1132,11 +1133,20 @@ research %>%
           what = gsub("NA, ", "", what),
           order = paste0(order, ".")
           ) %>% 
-  select(point, what) %>% 
-  kable()
+  select(point, what)
+```
+```{r}
+kable(tc[1:1, ])
+```
+
+<br class="pageBreak"/>
+
+```{r}
+kable(tc[2:nrow(tc), ])
 ```
 
 
+<br>
 
 ## Journal issues edited {.history .nohead}
 <!-- <div class = "hangingindent"> -->
