@@ -587,6 +587,8 @@ kable(sd_tbl)
 <!-- <br> -->
 <!-- <br class="pageBreak"/> -->
 
+<br>
+
 ## Peer-Reviewed Publications
 
 ```{r}
@@ -633,7 +635,7 @@ pubs_tbl <- pubs_tbl %>%
 <div class = "hangingindent prpa nohead">
 
 ```{r} 
-kable(pubs_tbl[1:7, ])
+kable(pubs_tbl[1:6, ])
 ```
 
 </div>
@@ -641,7 +643,7 @@ kable(pubs_tbl[1:7, ])
 <div class = "hangingindent prpa nohead">
 
 ```{r} 
-kable(pubs_tbl[8:16, ])
+kable(pubs_tbl[7:16, ])
 ```
 </div>
 
@@ -653,6 +655,8 @@ kable(pubs_tbl[17:nrow(pubs_tbl), ])
 ```
 
 </div>
+
+<!-- <br class="pageBreak"/> -->
 <br>
 
 ## Technical Reports {.submitted .nohead}
@@ -701,13 +705,21 @@ if(length(formatted_cites) > 0) {
  submitted_tbl <- tibble(count = paste0(seq(length(formatted_cites), 1), "."),
                          cites = paste(unlist(formatted_cites), fa_web, fa_doc, fa_git)) 
   
-  kable(submitted_tbl) 
+  kable(submitted_tbl[1:5, ]) 
 }
+```
+</div>
+
+<br class="pageBreak">
+<div class = "hangingindent">
+
+```{r}
+kable(submitted_tbl[6:nrow(submitted_tbl), ])
 ```
 
 </div>
 
-<br class="pageBreak">
+<!--<br class="pageBreak"> -->
 
 ## Training Manuals {.submitted .nohead}
 
@@ -760,8 +772,6 @@ if(length(formatted_cites) > 0) {
 ```
 
 </div>
-
-<br>
 
 <!-- <br class="pageBreak"/> -->
 
@@ -832,7 +842,7 @@ conf_tbl <- conf_tbl %>%
   mutate(year = ifelse(count_within_year == 1, year, "")) %>% 
   select(-count_within_year)
 
-kable(conf_tbl[1:8, ])
+kable(conf_tbl[1:7, ])
 ```
 
 </div>
@@ -841,7 +851,7 @@ kable(conf_tbl[1:8, ])
 <div class = "hangingindent prpa nohead">
 
 ```{r}
-kable(conf_tbl[9:19, ])
+kable(conf_tbl[8:18, ])
 ```
 
 </div>
@@ -850,10 +860,10 @@ kable(conf_tbl[9:19, ])
 <div class = "hangingindent prpa nohead">
 
 ```{r}
-kable(conf_tbl[20:nrow(conf_tbl), ])
+kable(conf_tbl[19:nrow(conf_tbl), ])
 ```
-
 </div>
+
 <br class="pageBreak">
 
 # Funding Activity
