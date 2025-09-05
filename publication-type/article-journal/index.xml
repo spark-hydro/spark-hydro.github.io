@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Article-Journal | Seonggyu Park</title>
-    <link>http://localhost:4321/publication-type/article-journal/</link>
-      <atom:link href="http://localhost:4321/publication-type/article-journal/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://spark-hydro.github.io/publication-type/article-journal/</link>
+      <atom:link href="https://spark-hydro.github.io/publication-type/article-journal/index.xml" rel="self" type="application/rss+xml" />
     <description>Article-Journal</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 01 Feb 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:4321/media/icon_hua5ec5d05fe01eb89777e75ead887f60c_69732_512x512_fill_lanczos_center_3.png</url>
+      <url>https://spark-hydro.github.io/media/icon_hua5ec5d05fe01eb89777e75ead887f60c_69732_512x512_fill_lanczos_center_3.png</url>
       <title>Article-Journal</title>
-      <link>http://localhost:4321/publication-type/article-journal/</link>
+      <link>https://spark-hydro.github.io/publication-type/article-journal/</link>
     </image>
     
     <item>
       <title>Quantifying climate change impacts on future water resources and salinity transport in a high semi-arid watershed</title>
-      <link>http://localhost:4321/publication/2024-02-01-balakrishnan-et-al/</link>
+      <link>https://spark-hydro.github.io/publication/2024-02-01-balakrishnan-et-al/</link>
       <pubDate>Thu, 01 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/publication/2024-02-01-balakrishnan-et-al/</guid>
+      <guid>https://spark-hydro.github.io/publication/2024-02-01-balakrishnan-et-al/</guid>
       <description>&lt;!-- 
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
@@ -40,9 +40,9 @@
     
     <item>
       <title>DayCent-CUTE - A global sensitivity, auto-calibration, and uncertainty analysis tool for DayCent</title>
-      <link>http://localhost:4321/publication/2023-12-wang_et_al/</link>
+      <link>https://spark-hydro.github.io/publication/2023-12-wang_et_al/</link>
       <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/publication/2023-12-wang_et_al/</guid>
+      <guid>https://spark-hydro.github.io/publication/2023-12-wang_et_al/</guid>
       <description>&lt;!-- 
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
@@ -66,9 +66,9 @@
     
     <item>
       <title>Introducing APEXMOD, A QGIS plugin for application and evaluation for the Enhanced APEX model</title>
-      <link>http://localhost:4321/publication/2023-01-park_et_al/</link>
+      <link>https://spark-hydro.github.io/publication/2023-01-park_et_al/</link>
       <pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/publication/2023-01-park_et_al/</guid>
+      <guid>https://spark-hydro.github.io/publication/2023-01-park_et_al/</guid>
       <description>&lt;!-- 
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
@@ -92,9 +92,9 @@
     
     <item>
       <title>An example journal article</title>
-      <link>http://localhost:4321/publication/journal-article/</link>
+      <link>https://spark-hydro.github.io/publication/journal-article/</link>
       <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/publication/journal-article/</guid>
+      <guid>https://spark-hydro.github.io/publication/journal-article/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.

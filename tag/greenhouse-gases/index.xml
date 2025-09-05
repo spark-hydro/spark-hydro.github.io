@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Greenhouse Gases | Seonggyu Park</title>
-    <link>http://localhost:4321/tag/greenhouse-gases/</link>
-      <atom:link href="http://localhost:4321/tag/greenhouse-gases/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://spark-hydro.github.io/tag/greenhouse-gases/</link>
+      <atom:link href="https://spark-hydro.github.io/tag/greenhouse-gases/index.xml" rel="self" type="application/rss+xml" />
     <description>Greenhouse Gases</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 31 Dec 2023 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:4321/media/icon_hua5ec5d05fe01eb89777e75ead887f60c_69732_512x512_fill_lanczos_center_3.png</url>
+      <url>https://spark-hydro.github.io/media/icon_hua5ec5d05fe01eb89777e75ead887f60c_69732_512x512_fill_lanczos_center_3.png</url>
       <title>Greenhouse Gases</title>
-      <link>http://localhost:4321/tag/greenhouse-gases/</link>
+      <link>https://spark-hydro.github.io/tag/greenhouse-gases/</link>
     </image>
     
     <item>
       <title>Development of a Carbon Dynamics Model for Predicting GHG Emission and Sequestration in Croplands</title>
-      <link>http://localhost:4321/project/2024-01-01-rda-ghg/</link>
+      <link>https://spark-hydro.github.io/project/2024-01-01-rda-ghg/</link>
       <pubDate>Sun, 31 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/project/2024-01-01-rda-ghg/</guid>
+      <guid>https://spark-hydro.github.io/project/2024-01-01-rda-ghg/</guid>
       <description>&lt;p&gt;Assessement of Spatio-Temporal Patterns of Groundwater/Surface Water Interactions and Solute Transports&lt;/p&gt;
 </description>
     </item>

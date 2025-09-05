@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Seonggyu Park</title>
-    <link>http://localhost:4321/</link>
-      <atom:link href="http://localhost:4321/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://spark-hydro.github.io/</link>
+      <atom:link href="https://spark-hydro.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Seonggyu Park</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Oct 2022 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:4321/media/icon_hua5ec5d05fe01eb89777e75ead887f60c_69732_512x512_fill_lanczos_center_3.png</url>
+      <url>https://spark-hydro.github.io/media/icon_hua5ec5d05fe01eb89777e75ead887f60c_69732_512x512_fill_lanczos_center_3.png</url>
       <title>Seonggyu Park</title>
-      <link>http://localhost:4321/</link>
+      <link>https://spark-hydro.github.io/</link>
     </image>
     
     <item>
       <title>Example Talk</title>
-      <link>http://localhost:4321/talk/example-talk/</link>
+      <link>https://spark-hydro.github.io/talk/example-talk/</link>
       <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/talk/example-talk/</guid>
+      <guid>https://spark-hydro.github.io/talk/example-talk/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
@@ -34,9 +34,9 @@
     
     <item>
       <title>Quantifying climate change impacts on future water resources and salinity transport in a high semi-arid watershed</title>
-      <link>http://localhost:4321/publication/2024-02-01-balakrishnan-et-al/</link>
+      <link>https://spark-hydro.github.io/publication/2024-02-01-balakrishnan-et-al/</link>
       <pubDate>Thu, 01 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/publication/2024-02-01-balakrishnan-et-al/</guid>
+      <guid>https://spark-hydro.github.io/publication/2024-02-01-balakrishnan-et-al/</guid>
       <description>&lt;!-- 
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
@@ -60,27 +60,27 @@
     
     <item>
       <title>Assessment of Water, Salt, Fire and Land Management in Colorado River Basin using APEX</title>
-      <link>http://localhost:4321/project/2021-01-01-blm/</link>
+      <link>https://spark-hydro.github.io/project/2021-01-01-blm/</link>
       <pubDate>Sun, 31 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/project/2021-01-01-blm/</guid>
+      <guid>https://spark-hydro.github.io/project/2021-01-01-blm/</guid>
       <description>&lt;p&gt;Assessement of Spatio-Temporal Patterns of Groundwater/Surface Water Interactions and Solute Transports&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Development of a Carbon Dynamics Model for Predicting GHG Emission and Sequestration in Croplands</title>
-      <link>http://localhost:4321/project/2024-01-01-rda-ghg/</link>
+      <link>https://spark-hydro.github.io/project/2024-01-01-rda-ghg/</link>
       <pubDate>Sun, 31 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/project/2024-01-01-rda-ghg/</guid>
+      <guid>https://spark-hydro.github.io/project/2024-01-01-rda-ghg/</guid>
       <description>&lt;p&gt;Assessement of Spatio-Temporal Patterns of Groundwater/Surface Water Interactions and Solute Transports&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Blog with Jupyter Notebooks!</title>
-      <link>http://localhost:4321/post/blog-with-jupyter/</link>
+      <link>https://spark-hydro.github.io/post/blog-with-jupyter/</link>
       <pubDate>Sat, 04 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/post/blog-with-jupyter/</guid>
+      <guid>https://spark-hydro.github.io/post/blog-with-jupyter/</guid>
       <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;IPython.core.display&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Image&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;
@@ -105,7 +105,7 @@
                /post/blog-with-jupyter/output_1_0_hu1e42f419f47ffd4b1ca9ef8f6670390a_11155_5a714abab5f53c70f7c38e19755638d3.webp 400w,
                /post/blog-with-jupyter/output_1_0_hu1e42f419f47ffd4b1ca9ef8f6670390a_11155_6b76da17c04a40aee4c1c633206f8065.webp 760w,
                /post/blog-with-jupyter/output_1_0_hu1e42f419f47ffd4b1ca9ef8f6670390a_11155_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
-               src=&#34;http://localhost:4321/post/blog-with-jupyter/output_1_0_hu1e42f419f47ffd4b1ca9ef8f6670390a_11155_5a714abab5f53c70f7c38e19755638d3.webp&#34;
+               src=&#34;https://spark-hydro.github.io/post/blog-with-jupyter/output_1_0_hu1e42f419f47ffd4b1ca9ef8f6670390a_11155_5a714abab5f53c70f7c38e19755638d3.webp&#34;
                width=&#34;601&#34;
                height=&#34;203&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -125,9 +125,9 @@
     
     <item>
       <title>DayCent-CUTE - A global sensitivity, auto-calibration, and uncertainty analysis tool for DayCent</title>
-      <link>http://localhost:4321/publication/2023-12-wang_et_al/</link>
+      <link>https://spark-hydro.github.io/publication/2023-12-wang_et_al/</link>
       <pubDate>Wed, 01 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/publication/2023-12-wang_et_al/</guid>
+      <guid>https://spark-hydro.github.io/publication/2023-12-wang_et_al/</guid>
       <description>&lt;!-- 
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
@@ -151,9 +151,9 @@
     
     <item>
       <title>Introducing APEXMOD, A QGIS plugin for application and evaluation for the Enhanced APEX model</title>
-      <link>http://localhost:4321/publication/2023-01-park_et_al/</link>
+      <link>https://spark-hydro.github.io/publication/2023-01-park_et_al/</link>
       <pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/publication/2023-01-park_et_al/</guid>
+      <guid>https://spark-hydro.github.io/publication/2023-01-park_et_al/</guid>
       <description>&lt;!-- 
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
@@ -177,18 +177,18 @@
     
     <item>
       <title>Development of DayCent Optimization framework with the Differential Evolution Adaptive Metropolis (DREAM) algorithm</title>
-      <link>http://localhost:4321/project/2023-01-31-daycent/</link>
+      <link>https://spark-hydro.github.io/project/2023-01-31-daycent/</link>
       <pubDate>Tue, 31 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/project/2023-01-31-daycent/</guid>
+      <guid>https://spark-hydro.github.io/project/2023-01-31-daycent/</guid>
       <description>&lt;p&gt;Assessement of Spatio-Temporal Patterns of Groundwater/Surface Water Interactions and Solute Transports&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Welcome to Hugo Blox Builder, the website builder for Hugo</title>
-      <link>http://localhost:4321/post/getting-started/</link>
+      <link>https://spark-hydro.github.io/post/getting-started/</link>
       <pubDate>Sun, 13 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/post/getting-started/</guid>
+      <guid>https://spark-hydro.github.io/post/getting-started/</guid>
       <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;libr&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;hello&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
@@ -266,9 +266,9 @@
     
     <item>
       <title>Hello R Markdown</title>
-      <link>http://localhost:4321/post/2020-12-01-r-rmarkdown/</link>
+      <link>https://spark-hydro.github.io/post/2020-12-01-r-rmarkdown/</link>
       <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
-      <guid>http://localhost:4321/post/2020-12-01-r-rmarkdown/</guid>
+      <guid>https://spark-hydro.github.io/post/2020-12-01-r-rmarkdown/</guid>
       <description>&lt;h1 id=&#34;r-markdown&#34;&gt;R Markdown&lt;/h1&gt;
 &lt;p&gt;This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;You can embed an R code chunk like this:&lt;/p&gt;
@@ -299,7 +299,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;init.angle&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-50&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;border&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;NA&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;http://localhost:4321/post/2020-12-01-r-rmarkdown/index.en_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
+&lt;img src=&#34;https://spark-hydro.github.io/post/2020-12-01-r-rmarkdown/index.en_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;&lt;span id=&#34;fig:pie&#34;&gt;&lt;/span&gt;Figure 1: A fancy pie chart.&lt;/p&gt;
 &lt;/div&gt;
 </description>
@@ -307,18 +307,18 @@
     
     <item>
       <title>SWAT-MODFLOW modeling to support resilient development and return on investment analyses in the Cubango-Okavango River Basin (CORB)</title>
-      <link>http://localhost:4321/project/2021-04-31-okavango/</link>
+      <link>https://spark-hydro.github.io/project/2021-04-31-okavango/</link>
       <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/project/2021-04-31-okavango/</guid>
+      <guid>https://spark-hydro.github.io/project/2021-04-31-okavango/</guid>
       <description>&lt;p&gt;Assessement of Spatio-Temporal Patterns of Groundwater/Surface Water Interactions and Solute Transports&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Development of python modules for integrated Hydrological Models&#39; parameter estimation and uncertainty analysis</title>
-      <link>http://localhost:4321/project/2020-01-01-swatmf/</link>
+      <link>https://spark-hydro.github.io/project/2020-01-01-swatmf/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/project/2020-01-01-swatmf/</guid>
+      <guid>https://spark-hydro.github.io/project/2020-01-01-swatmf/</guid>
       <description>&lt;p&gt;This study introduces a reproducible parameter estimation and uncertainty analysis approach to the highly parameterized and integrated surface water – groundwater model, SWAT-MODFLOW, APEX-MODFLOW-RT3D-Salt models.&lt;/p&gt;
 &lt;p&gt;
 
@@ -338,7 +338,7 @@
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://spark-brc.github.io/images/author_background.png&#34; alt=&#34;Scenario 1: Across columns&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://spark-hydro.github.io/images/author_background.png&#34; alt=&#34;Scenario 1: Across columns&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 </description>
@@ -346,9 +346,9 @@
     
     <item>
       <title>Writing technical content in Markdown</title>
-      <link>http://localhost:4321/post/writing-technical-content/</link>
+      <link>https://spark-hydro.github.io/post/writing-technical-content/</link>
       <pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/post/writing-technical-content/</guid>
+      <guid>https://spark-hydro.github.io/post/writing-technical-content/</guid>
       <description>&lt;p&gt;Hugo Blox Builder is designed to give technical content creators a seamless experience. You can focus on the content and Wowchemy handles the rest.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Highlight your code snippets, take notes on math classes, and draw diagrams from textual representation.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;On this page, you&amp;rsquo;ll find some examples of the types of technical content that can be rendered with Wowchemy.&lt;/p&gt;
@@ -448,7 +448,7 @@ data.head()
 
 
 
-&lt;div id=&#34;chart-193725684&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-879625143&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -458,7 +458,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-193725684&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-879625143&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -741,9 +741,9 @@ Crash --&gt; [*]
     
     <item>
       <title>An example preprint / working paper</title>
-      <link>http://localhost:4321/publication/preprint/</link>
+      <link>https://spark-hydro.github.io/publication/preprint/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/publication/preprint/</guid>
+      <guid>https://spark-hydro.github.io/publication/preprint/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Create your slides in Markdown - click the &lt;em&gt;Slides&lt;/em&gt; button to check out the example.
@@ -755,9 +755,9 @@ Crash --&gt; [*]
     
     <item>
       <title>Slides</title>
-      <link>http://localhost:4321/slides/example/</link>
+      <link>https://spark-hydro.github.io/slides/example/</link>
       <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/slides/example/</guid>
+      <guid>https://spark-hydro.github.io/slides/example/</guid>
       <description>&lt;h1 id=&#34;create-slides-in-markdown-with-hugo-blox-builder&#34;&gt;Create slides in Markdown with Hugo Blox Builder&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://hugoblox.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo Blox Builder&lt;/a&gt; | &lt;a href=&#34;https://docs.hugoblox.com/content/slides/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -880,27 +880,27 @@ $$&lt;/p&gt;
     
     <item>
       <title>Privacy Policy</title>
-      <link>http://localhost:4321/privacy/</link>
+      <link>https://spark-hydro.github.io/privacy/</link>
       <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
-      <guid>http://localhost:4321/privacy/</guid>
+      <guid>https://spark-hydro.github.io/privacy/</guid>
       <description>&lt;p&gt;Add your privacy policy here and set &lt;code&gt;draft: false&lt;/code&gt; to publish it. Otherwise, delete this file if you don&amp;rsquo;t need it.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Terms</title>
-      <link>http://localhost:4321/terms/</link>
+      <link>https://spark-hydro.github.io/terms/</link>
       <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
-      <guid>http://localhost:4321/terms/</guid>
+      <guid>https://spark-hydro.github.io/terms/</guid>
       <description>&lt;p&gt;Add your terms here and set &lt;code&gt;draft: false&lt;/code&gt; to publish it. Otherwise, delete this file if you don&amp;rsquo;t need it.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>An example journal article</title>
-      <link>http://localhost:4321/publication/journal-article/</link>
+      <link>https://spark-hydro.github.io/publication/journal-article/</link>
       <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/publication/journal-article/</guid>
+      <guid>https://spark-hydro.github.io/publication/journal-article/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
@@ -917,9 +917,9 @@ $$&lt;/p&gt;
     
     <item>
       <title>An example conference paper</title>
-      <link>http://localhost:4321/publication/conference-paper/</link>
+      <link>https://spark-hydro.github.io/publication/conference-paper/</link>
       <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/publication/conference-paper/</guid>
+      <guid>https://spark-hydro.github.io/publication/conference-paper/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
