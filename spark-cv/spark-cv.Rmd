@@ -175,7 +175,7 @@ cat(header)
 
 
 <div class = "footer",>
-  <a href="https://github.com/spark-brc" class="icon-block">
+  <a href="https://github.com/spark-hydro" class="icon-block">
       <i class="fab fafooter fa-github"> &ensp; | </i>
   </a>
   
@@ -216,7 +216,7 @@ cat(header)
 
 <!-- Online -->
 <div class="item3">
-<a href="https://github.com/spark-brc/spark-brc.github.io/raw/main/spark-cv/spark-cv.pdf" class="icon-block">
+<a href="https://github.com/spark-hydro/spark-hydro.github.io/raw/main/spark-cv/spark-cv.pdf" class="icon-block">
 <img class="top_aligned_image" src="cv_pdf.svg">
 <span class="caption">DOWNLOAD PDF</span>
 </a>
@@ -224,7 +224,7 @@ cat(header)
 
 <!-- PDF -->
 <!-- <div class="item3"> -->
-<!-- <a href="https://spark-brc.github.io/spark-cv/" class="icon-block"> -->
+<!-- <a href="https://spark-hydro.github.io/spark-cv/" class="icon-block"> -->
 <!-- <img class="top_aligned_image" src="cv_online.svg"> -->
 <!-- <span class="caption">VIEW ONLINE</span> -->
 <!-- </a> -->
