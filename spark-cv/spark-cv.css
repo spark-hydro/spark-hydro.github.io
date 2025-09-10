@@ -238,7 +238,15 @@ p, li {
     line-height: 110%;
     margin-bottom:50pt;
   }
-  
+
+.last2-1 {
+    color: gray;
+    text-align: center;
+    font-size: 12pt;
+    line-height: 110%;
+    margin-bottom:50pt;
+  } 
+
 .sub_first {
   color: gray;
   text-align: left;
