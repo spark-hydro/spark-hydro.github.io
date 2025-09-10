@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts | Seonggyu Park</title>
+    <title>Seonggyu Park</title>
     <link>https://spark-hydro.github.io/post/</link>
       <atom:link href="https://spark-hydro.github.io/post/index.xml" rel="self" type="application/rss+xml" />
-    <description>Posts</description>
+    <description>Seonggyu Park</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 04 Nov 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://spark-hydro.github.io/media/icon_hua5ec5d05fe01eb89777e75ead887f60c_69732_512x512_fill_lanczos_center_3.png</url>
-      <title>Posts</title>
+      <title>Seonggyu Park</title>
       <link>https://spark-hydro.github.io/post/</link>
     </image>
     
@@ -284,7 +284,7 @@ data.head()
 
 
 
-&lt;div id=&#34;chart-621938754&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-546271398&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -294,7 +294,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-621938754&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-546271398&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
