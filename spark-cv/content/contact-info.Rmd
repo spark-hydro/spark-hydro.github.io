@@ -6,7 +6,7 @@
 |:------|-----:|
 | <span style="color: #454545"><i class="fas  fa-map-marker-alt"></i></span> [CECE, Texas Tech University](https://www.depts.ttu.edu/ceweb/) |
 | <span style="color: #454545"><i class="fas  fa-map-marker-alt"></i></span> [WARTER Center](https://www.depts.ttu.edu/waterresources/) |
-| <span style="color: #454545"><i class="fas  fa-map-marker-alt"></i></span> [TxPWC](https://www.depts.ttu.edu/ceweb/) |
+| <span style="color: #454545"><i class="fas  fa-map-marker-alt"></i></span> [TxPWC](https://www.depts.ttu.edu/research/tx-water-consortium/) |
 | <span style="color: #454545"><i class="fas  fa-envelope"></i></span> seonggyu.park\@ttu.edu |
 | <span style="color: #454545"><i class="fas  fa-globe"></i></span> [iHydro M&D Research Group](https://spark-hydro.github.io/) |
 | <span style="color: #454545"><i class="fab  fa-github"></i></span> [Github](https://github.com/spark-hydro) |

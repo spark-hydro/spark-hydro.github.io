@@ -146,7 +146,7 @@ make_cite <- function(authors,	year,	title,	journal = NULL,	volume = NULL,
 ```
 
 ```{r}
-PDF <- TRUE # Set to TRUE when rendering to PDF via pagedown::chrome_print('spark-cv.Rmd', 'spark-cv.pdf')
+PDF <- FALSE # Set to TRUE when rendering to PDF via pagedown::chrome_print('spark-cv.Rmd', 'spark-cv.pdf')
 if(PDF) {
   header <- '
   <a href="#toc" class="icon-block2">
