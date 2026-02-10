@@ -71,10 +71,10 @@ og_image = "images/felipecordero-og.png"
 
 description = "iHydro M&D Research Group at Texas Tech University focuses on integrated hydrological modeling and data-driven water resources management. Our research advances uncertainty quantification, management scenario analysis, and decision-support frameworks to support sustainable water and environmental systems."
 
-linkedin_url = "https://www.linkedin.com/in/felipe-cordero-osorio"
+linkedin_url = "https://www.linkedin.com/in/spark-hydro"
 linkedin_text = "linkedin.com/in/felipe-cordero-osorio"
-github_url = "https://github.com/felipecordero"
-github_text = "github.com/felipecordero"
+github_url = "https://github.com/spark-hydro"
+github_text = "github.com/spark-hydro"
 
 calendly_url = "https://calendly.com/mail-felipecordero/30min"
 calendly_height = "700px"
@@ -96,7 +96,7 @@ url = "https://www.linkedin.com/in/felipe-cordero-osorio/"
 
 [[params.social]]
 icon = "github"
-url = "https://github.com/felipecordero"
+url = "https://github.com/spark-hydro"
 
 sectionPagesMenu = 'main'
 
