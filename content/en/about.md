@@ -1,7 +1,7 @@
 ---
 title: "About"
 type: "homepage"
-featured_image: "/images/felipe-cordero-profile.jpeg"
+featured_image: "/images/avatar.jpg"
 intro: >-
   Hi! I'm Felipe Cordero, a **Structural Engineer, AI and Full Stack Developer** 🏗️🤖💻 with **14+ years** in AEC and software development. My journey has taken me from **Chile to Montréal**, where I combine traditional engineering with modern technology to solve complex problems in engineering and automation. Currently, I'm at <a href="https://fireraven.ai" target="_blank" rel="noopener noreferrer"><strong>Fireraven</strong></a>, building security and compliance solutions for LLM-based AI agents. Recently, I was honored with the **Academic Excellence Scholarship** (Air Canada, Collège LaSalle Montréal, 2025) 🏆 for my achievements in AI/ML studies.
 

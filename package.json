@@ -1,18 +1,18 @@
 {
-  "name": "felipe-cordero-site",
+  "name": "park-hydro-site",
   "version": "1.0.0",
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/typography": "^0.5.16",
     "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.3",
+    "postcss": "^8.5.6",
     "postcss-cli": "^11.0.1",
     "postcss-import": "^16.1.0",
     "stylelint": "^16.19.1",
     "stylelint-config-standard": "^38.0.0",
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^3.4.19"
   },
-  "description": "",
+  "description": "This is my personal website built with Hugo, a fast and modern static site generator. The site features a clean, responsive design powered by Tailwind CSS and uses my own theme, CareerCanvas.",
   "main": "index.js",
   "dependencies": {
     "ansi-regex": "^5.0.1",

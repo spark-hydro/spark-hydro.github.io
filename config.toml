@@ -1,7 +1,7 @@
 # Hugo Site Configuration
-baseURL = "https://felipecordero.com"
+baseURL = "https://spark-hydro.github.io/"
 languageCode = "en-us"
-title = "Felipe Cordero"
+title = "iHydro M&D"
 theme = "careercanvas"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
@@ -12,9 +12,9 @@ defaultContentLanguageInSubdir = false
     languageName = "English"
     weight = 1
     [languages.en.params]
-      tagline = "Engineer. Coder. Problem Solver."
-      hero_description = "Structural Engineer, AI and Full Stack Developer with 14+ years in Architecture, Engineering, and Construction (AEC). Currently building security and compliance solutions for LLM-based AI agents at Fireraven."
-      hero_location = "Montréal, Canada"
+      tagline = "integrated hydrological modeling. uncertainty quantification. data-driven analysis"
+      hero_description = "The iHydro M&D Research Group at Texas Tech University focuses on integrated hydrological modeling and data-driven water resources management, advancing uncertainty quantification and decision-support frameworks for sustainable water resources."
+      hero_location = "Texas, USA"
       resume_url = "/files/Felipe_Cordero_CV_English_version.pdf"
       collab_tags = [
         "Full Stack Development",
@@ -60,16 +60,16 @@ defaultContentLanguageInSubdir = false
   writeStats = true
 
 [params]
-name = "Felipe Cordero"
-firstName = "Felipe"
-lastName = "Cordero"
-email = "mail@felipecordero.com"
-profile_image = "/images/felipe-cordero-profile.jpg"
-author = "Felipe Cordero"
+name = "iHydro M&D Lab"
+firstName = "iHydro M&D Lab"
+# lastName = "Cordero"
+email = "mail@seonggyu.park@ttu.com"
+profile_image = "/images/avatar.jpg"
+author = "iHydro M&D Research Group"
 
 og_image = "images/felipecordero-og.png"
 
-description = "Structural Engineer, AI and Full Stack Developer. Building security and compliance solutions for LLM-based AI agents at Fireraven."
+description = "iHydro M&D Research Group at Texas Tech University focuses on integrated hydrological modeling and data-driven water resources management. Our research advances uncertainty quantification, management scenario analysis, and decision-support frameworks to support sustainable water and environmental systems."
 
 linkedin_url = "https://www.linkedin.com/in/felipe-cordero-osorio"
 linkedin_text = "linkedin.com/in/felipe-cordero-osorio"
@@ -79,7 +79,7 @@ github_text = "github.com/felipecordero"
 calendly_url = "https://calendly.com/mail-felipecordero/30min"
 calendly_height = "700px"
 
-copyright = "Felipe Cordero"
+copyright = "Seonggyu Park"
 
 
 resume_url_en = "/files/Felipe_Cordero_CV_English_version.pdf"

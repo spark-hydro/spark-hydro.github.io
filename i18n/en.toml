@@ -99,8 +99,11 @@ other = "Interests"
 [languages]
 other = "Languages"
 
+# [helloIm]
+# other = "Hello, I'm"
+
 [helloIm]
-other = "Hello, I'm"
+other = "Welcome to"
 
 [viewCV]
 other = "View CV"
