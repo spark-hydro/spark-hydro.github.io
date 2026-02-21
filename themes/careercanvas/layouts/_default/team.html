@@ -1,0 +1,208 @@
+{{ define "main" }}
+<section class="py-16 bg-bg dark:bg-bg">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Page Title -->
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-bold text-text-primary dark:text-text-primary mb-2">{{ .Title }}</h1>
+      <div class="w-16 h-1 bg-primary mx-auto"></div>
+    </div>
+
+    <!-- Principal Investigator Section -->
+    {{ if .Params.principal_investigator }}
+    <div class="mb-16">
+      <h2 class="text-2xl font-bold text-center text-primary dark:text-primary-light mb-8">
+        {{ .Params.pi_title | default "Principal Investigator" }}
+      </h2>
+      
+      {{ with .Params.principal_investigator }}
+      <div class="max-w-4xl mx-auto bg-bg-secondary dark:bg-bg-tertiary rounded-lg p-8 border border-border-primary dark:border-border-primary">
+        <div class="flex flex-col md:flex-row gap-8">
+          <!-- Photo -->
+          <div class="md:w-1/3 flex-shrink-0">
+            {{ if .photo }}
+            <img src="{{ .photo }}" alt="{{ .name }}" class="w-full rounded-lg shadow-lg">
+            {{ else }}
+            <div class="w-full aspect-square bg-gradient-primary-lighter rounded-lg flex items-center justify-center">
+              <i class="fas fa-user text-6xl text-primary"></i>
+            </div>
+            {{ end }}
+          </div>
+          
+          <!-- Info -->
+          <div class="md:w-2/3">
+            <h3 class="text-2xl font-bold text-text-primary dark:text-text-primary mb-1">{{ .name }}</h3>
+            <p class="text-primary dark:text-primary-light font-medium mb-4">{{ .title }}</p>
+            
+            {{ if .bio }}
+            <p class="text-text-secondary dark:text-text-secondary mb-6 leading-relaxed">{{ .bio | markdownify }}</p>
+            {{ end }}
+            
+            <!-- Education -->
+            {{ if .education }}
+            <div class="mb-6">
+              <h4 class="text-lg font-semibold text-text-primary dark:text-text-primary mb-2">Education</h4>
+              <ul class="list-disc list-inside text-text-secondary dark:text-text-secondary space-y-1 text-sm">
+                {{ range .education }}
+                <li>{{ . }}</li>
+                {{ end }}
+              </ul>
+            </div>
+            {{ end }}
+            
+            <!-- Research Interests -->
+            {{ if .research_interests }}
+            <div class="mb-6">
+              <h4 class="text-lg font-semibold text-text-primary dark:text-text-primary mb-2">Research Interests</h4>
+              <div class="flex flex-wrap gap-2">
+                {{ range .research_interests }}
+                <span class="bg-primary/10 text-primary dark:text-primary-light px-3 py-1 rounded-full text-sm border border-primary/30">
+                  {{ . }}
+                </span>
+                {{ end }}
+              </div>
+            </div>
+            {{ end }}
+            
+            <!-- Contact -->
+            <div class="flex items-center gap-4 mt-4">
+              {{ if .email }}
+              <span class="text-sm text-text-secondary dark:text-text-secondary">
+                <strong>Email:</strong> {{ .email }}
+              </span>
+              {{ end }}
+              
+              <!-- Social Links -->
+              <div class="flex gap-3">
+                {{ if .github }}
+                <a href="{{ .github }}" target="_blank" class="text-text-secondary dark:text-text-secondary hover:text-primary dark:hover:text-primary-light transition-colors">
+                  <i class="fab fa-github text-xl"></i>
+                </a>
+                {{ end }}
+                {{ if .twitter }}
+                <a href="{{ .twitter }}" target="_blank" class="text-text-secondary dark:text-text-secondary hover:text-primary dark:hover:text-primary-light transition-colors">
+                  <i class="fab fa-twitter text-xl"></i>
+                </a>
+                {{ end }}
+                {{ if .linkedin }}
+                <a href="{{ .linkedin }}" target="_blank" class="text-text-secondary dark:text-text-secondary hover:text-primary dark:hover:text-primary-light transition-colors">
+                  <i class="fab fa-linkedin text-xl"></i>
+                </a>
+                {{ end }}
+                {{ if .google_scholar }}
+                <a href="{{ .google_scholar }}" target="_blank" class="text-text-secondary dark:text-text-secondary hover:text-primary dark:hover:text-primary-light transition-colors">
+                  <i class="fas fa-graduation-cap text-xl"></i>
+                </a>
+                {{ end }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    <!-- Current Members Section -->
+    {{ if .Params.current_members }}
+    <div class="mb-16">
+      <h2 class="text-2xl font-bold text-center text-primary dark:text-primary-light mb-8">
+        {{ .Params.members_title | default "Current Members" }}
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {{ range .Params.current_members }}
+        <div class="bg-bg-secondary dark:bg-bg-tertiary rounded-lg overflow-hidden border border-border-primary dark:border-border-primary hover:shadow-lg transition-shadow duration-300">
+          <!-- Photo -->
+          <div class="aspect-square overflow-hidden bg-gradient-primary-lighter">
+            {{ if .photo }}
+            <img src="{{ .photo }}" alt="{{ .name }}" class="w-full h-full object-cover">
+            {{ else }}
+            <div class="w-full h-full flex items-center justify-center">
+              <i class="fas fa-user text-6xl text-primary"></i>
+            </div>
+            {{ end }}
+          </div>
+          
+          <!-- Info -->
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-text-primary dark:text-text-primary mb-1 text-center">{{ .name }}</h3>
+            <p class="text-primary dark:text-primary-light text-sm font-medium mb-3 text-center">{{ .position }}</p>
+            
+            {{ if .bio }}
+            <p class="text-text-secondary dark:text-text-secondary text-sm mb-4 leading-relaxed">{{ .bio }}</p>
+            {{ end }}
+            
+            {{ if .read_more }}
+            <div class="text-center mb-4">
+              <a href="{{ .read_more }}" class="inline-block bg-primary/10 text-primary dark:text-primary-light px-4 py-2 rounded hover:bg-primary/20 transition-colors text-sm border border-primary/30">
+                Read More →
+              </a>
+            </div>
+            {{ end }}
+            
+            <!-- Contact -->
+            <div class="text-center">
+              {{ if .email }}
+              <p class="text-text-secondary dark:text-text-secondary text-xs mb-2">
+                <i class="fas fa-envelope"></i> {{ .email }}
+              </p>
+              {{ end }}
+              
+              <!-- Social Links -->
+              {{ if or .github .twitter .linkedin .google_scholar }}
+              <div class="flex justify-center gap-3 mt-2">
+                {{ if .github }}
+                <a href="{{ .github }}" target="_blank" class="text-text-secondary dark:text-text-secondary hover:text-primary dark:hover:text-primary-light transition-colors">
+                  <i class="fab fa-github"></i>
+                </a>
+                {{ end }}
+                {{ if .twitter }}
+                <a href="{{ .twitter }}" target="_blank" class="text-text-secondary dark:text-text-secondary hover:text-primary dark:hover:text-primary-light transition-colors">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                {{ end }}
+                {{ if .linkedin }}
+                <a href="{{ .linkedin }}" target="_blank" class="text-text-secondary dark:text-text-secondary hover:text-primary dark:hover:text-primary-light transition-colors">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                {{ end }}
+                {{ if .google_scholar }}
+                <a href="{{ .google_scholar }}" target="_blank" class="text-text-secondary dark:text-text-secondary hover:text-primary dark:hover:text-primary-light transition-colors">
+                  <i class="fas fa-graduation-cap"></i>
+                </a>
+                {{ end }}
+              </div>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+
+    <!-- Alumni Section (Optional) -->
+    {{ if .Params.alumni }}
+    <div>
+      <h2 class="text-2xl font-bold text-center text-primary dark:text-primary-light mb-8">
+        {{ .Params.alumni_title | default "Alumni" }}
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {{ range .Params.alumni }}
+        <div class="bg-bg-secondary dark:bg-bg-tertiary rounded-lg p-4 border border-border-primary dark:border-border-primary">
+          <h3 class="text-lg font-bold text-text-primary dark:text-text-primary mb-1">{{ .name }}</h3>
+          <p class="text-text-secondary dark:text-text-secondary text-sm mb-1">{{ .position }}</p>
+          {{ if .current_position }}
+          <p class="text-primary dark:text-primary-light text-sm">Now: {{ .current_position }}</p>
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+
+  </div>
+</section>
+{{ end }}

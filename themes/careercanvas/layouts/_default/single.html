@@ -4,12 +4,49 @@
     <div class="flex flex-col lg:flex-row gap-8">
       <!-- Main Content -->
       <div class="{{ if or (and .Params.tags (or (eq .Type "engineering") (eq .Type "contributions") (eq .Type "blog"))) (and .Content (gt (len .Content) 500)) }}lg:w-2/3{{ else }}w-full{{ end }}">
-        <h1 class="text-3xl font-bold text-center mb-12 font-heading text-text-primary dark:text-text-primary">{{ .Title }}</h1>
+        <h1 class="text-3xl font-bold text-center mb-8 font-heading text-text-primary dark:text-text-primary">{{ .Title }}</h1>
+
+        <!-- Project Metadata Section -->
+        {{ if or .Params.role .Params.total_budget .Params.sdate .Params.funded }}
+        <div class="bg-bg-secondary dark:bg-bg-tertiary rounded-lg p-6 mb-8 border border-border-primary dark:border-border-primary">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+            {{ if .Params.role }}
+            <div>
+              <span class="font-semibold text-text-primary dark:text-text-primary">Role:</span>
+              <span class="text-text-secondary dark:text-text-secondary ml-2">{{ .Params.role }}</span>
+            </div>
+            {{ end }}
+            
+            {{ if .Params.total_budget }}
+            <div>
+              <span class="font-semibold text-text-primary dark:text-text-primary">Total Budget:</span>
+              <span class="text-text-secondary dark:text-text-secondary ml-2">{{ .Params.total_budget }}</span>
+            </div>
+            {{ end }}
+            
+            {{ if and .Params.sdate .Params.edate }}
+            <div>
+              <span class="font-semibold text-text-primary dark:text-text-primary">Period:</span>
+              <span class="text-text-secondary dark:text-text-secondary ml-2">{{ .Params.sdate }} to {{ .Params.edate }}</span>
+            </div>
+            {{ end }}
+            
+            {{ if .Params.funded }}
+            <div>
+              <span class="font-semibold text-text-primary dark:text-text-primary">Funded by:</span>
+              <span class="text-text-secondary dark:text-text-secondary ml-2">{{ .Params.funded }}</span>
+            </div>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+        
         {{ if eq .Type "blog" }}
         <div class="text-center text-text-secondary dark:text-text-secondary mb-8">
           <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
         </div>
         {{ end }}
+        
         <div class="prose max-w-none prose-lg markdown-content dark:prose-invert prose-gray [&_iframe]:min-h-[600px] [&_iframe]:w-full [&_img+em]:block [&_img+em]:text-center [&_img+em]:font-bold">
           {{ .Content }}
         </div>
@@ -78,4 +115,4 @@
     </div>
   </div>
 </section>
-{{ end }} 
+{{ end }}

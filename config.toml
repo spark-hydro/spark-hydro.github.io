@@ -14,14 +14,15 @@ defaultContentLanguageInSubdir = false
     [languages.en.params]
       tagline = "integrated hydrological modeling. uncertainty quantification. data-driven analysis"
       hero_description = "The iHydro M&D Research Group at Texas Tech University focuses on integrated hydrological modeling and data-driven water resources management, advancing uncertainty quantification and decision-support frameworks for sustainable water resources."
-      hero_location = "Texas, USA"
-      resume_url = "/files/Felipe_Cordero_CV_English_version.pdf"
+      hero_location = "Texas Tech University, USA"
+      # resume_url = "https://localhost:1313/spark-cv/"
+      resume_url = "https://spark-hydro.github.io/spark-cv"
       collab_tags = [
-        "Full Stack Development",
-        "AI Security & Compliance",
-        "LLM-based Solutions",
-        "PostgreSQL & Data Pipelines",
-        "Agile Scrum"
+        "Integrated Hydrological Modeling",
+        "Uncertainty Quantification", 
+        "Data-Driven Analysis",
+        "Water Resources Management",
+        "Sustainable Water Systems"
       ]
   [languages.es]
     contentDir = "content/es"
@@ -63,7 +64,7 @@ defaultContentLanguageInSubdir = false
 name = "iHydro M&D Lab"
 firstName = "iHydro M&D Lab"
 # lastName = "Cordero"
-email = "mail@seonggyu.park@ttu.com"
+email = "seonggyu.park@ttu.com"
 profile_image = "/images/avatar.jpg"
 author = "iHydro M&D Research Group"
 

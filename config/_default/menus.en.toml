@@ -1,7 +1,7 @@
-[[main]]
-name = "About"
-url = "/#about"
-weight = 2
+# [[main]]
+# name = "About"
+# url = "/#about"
+# weight = 2
 
 [[main]]
 name = "Research"
@@ -10,8 +10,9 @@ weight = 3
 
 [[main]]
 name = "Team"
-url = "/#team"
+url = "/team/"
 weight = 4
+
 
 [[main]]
 name = "Teaching"
