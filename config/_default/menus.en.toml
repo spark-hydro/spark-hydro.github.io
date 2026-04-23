@@ -14,22 +14,22 @@ url = "/team/"
 weight = 4
 
 
-[[main]]
-name = "Teaching"
-url = "/#teaching"
-weight = 5
+# [[main]]
+# name = "Teaching"
+# url = "/#teaching"
+# weight = 5
 
 
-[[main]]
-name = "Service"
-url = "/#service"
-weight = 6
+# [[main]]
+# name = "Service"
+# url = "/#service"
+# weight = 6
 
 
-[[main]]
-name = "Skills"
-url = "/#skills"
-weight = 6
+# [[main]]
+# name = "Skills"
+# url = "/#skills"
+# weight = 6
 
 # [[main]]
 # name = "Experience"
@@ -46,20 +46,20 @@ weight = 6
 # url = "/#technical"
 # weight = 8
 
-[[main]]
-name = "Blog"
-url = "/blog/"
-weight = 60
+# [[main]]
+# name = "Blog"
+# url = "/blog/"
+# weight = 60
 
-[[main]]
-name = "Engineering"
-url = "/engineering/"
-weight = 50
-pre = "engineering"
+# [[main]]
+# name = "Engineering"
+# url = "/engineering/"
+# weight = 50
+# pre = "engineering"
 
-[[main]]
-name = "Contributions"
-url = "/contributions/"
-weight = 51
-pre = "contributions"
+# [[main]]
+# name = "Contributions"
+# url = "/contributions/"
+# weight = 51
+# pre = "contributions"
 
