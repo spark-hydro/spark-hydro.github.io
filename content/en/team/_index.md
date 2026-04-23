@@ -24,9 +24,9 @@ principal_investigator:
 
   email: "seonggyu.park@ttu.edu"
   github: "https://github.com/yikeshen"
-  twitter: "https://twitter.com/yikeshen"
-  linkedin: "https://linkedin.com/in/yikeshen"
-  google_scholar: "https://scholar.google.com/citations?user=example"
+  # twitter: "https://twitter.com/yikeshen"
+  linkedin: "https://www.linkedin.com/in/spark-hydro/"
+  google_scholar: "https://scholar.google.com/citations?user=5Ob9lioAAAAJ&hl=en"
 
 current_members:
   - name: ""
