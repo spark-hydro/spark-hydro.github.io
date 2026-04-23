@@ -4,8 +4,8 @@
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/typography": "^0.5.16",
-    "autoprefixer": "^10.4.27",
-    "postcss": "^8.5.8",
+    "autoprefixer": "^10.5.0",
+    "postcss": "^8.5.10",
     "postcss-cli": "^11.0.1",
     "postcss-import": "^16.1.0",
     "stylelint": "^16.19.1",

@@ -2,7 +2,7 @@
 /* Dynamic Color Variables - Will be overridden by JavaScript */
 :root {
   /* Default Theme Colors - First palette from config.toml or fallback */
-  {{ $defaultPalette := index .Site.Params.color_palettes.palette 0 }}
+  /* {{ $defaultPalette := index .Site.Params.color_palettes.palette 0 }}
   {{ if $defaultPalette }}
   --color-primary: {{ $defaultPalette.main_color }};
   --color-second: {{ $defaultPalette.second_color }};
@@ -11,8 +11,20 @@
   --color-primary: #474A51;
   --color-second: #E52521;
   --color-third: #3CB043;
+  {{ end }} */
+
+  {{ $brand := .Site.Params.brand_palette }}
+  {{ if $brand }}
+  --color-primary: {{ $brand.primary }};
+  --color-second: {{ $brand.secondary }};
+  --color-third: {{ $brand.accent }};
+  {{ else }}
+  --color-primary: #474A51;
+  --color-second: #E52521;
+  --color-third: #3CB043;
   {{ end }}
-  
+
+
   /* Color variations - derived from base colors */
   --color-primary-light: color-mix(in srgb, var(--color-primary) 80%, white);
   --color-primary-dark: color-mix(in srgb, var(--color-primary) 80%, black);

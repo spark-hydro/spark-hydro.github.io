@@ -1,9 +1,31 @@
 {{ define "main" }}
-{{ partial "hero.html" . }}
-{{ partial "about.html" . }}
-{{ partial "skills.html" . }}
-{{ partial "experience.html" . }}
-{{ partial "technical.html" . }}
-{{ partial "testimonials.html" . }}
-{{ partial "contact.html" . }}
+  {{ $sections := site.Params.home_sections }}
+
+  {{ if or (not $sections) $sections.hero }}
+    {{ partial "hero.html" . }}
+  {{ end }}
+
+  {{ if and $sections $sections.about }}
+    {{ partial "about.html" . }}
+  {{ end }}
+
+  {{ if and $sections $sections.skills }}
+    {{ partial "skills.html" . }}
+  {{ end }}
+
+  {{ if and $sections $sections.experience }}
+    {{ partial "experience.html" . }}
+  {{ end }}
+
+  {{ if and $sections $sections.technical }}
+    {{ partial "technical.html" . }}
+  {{ end }}
+
+  {{ if and $sections $sections.testimonials }}
+    {{ partial "testimonials.html" . }}
+  {{ end }}
+
+  {{ if and $sections $sections.contact }}
+    {{ partial "contact.html" . }}
+  {{ end }}
 {{ end }}

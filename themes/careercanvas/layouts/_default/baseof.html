@@ -53,7 +53,9 @@
     {{ partial "pexels-config.html" . }}
     {{ partial "color-config.html" . }}
     <script src="{{ $scripts.RelPermalink }}"></script>
+    {{ if site.Params.enable_dynamic_colors }}
     <script src="{{ $colors.RelPermalink }}"></script>
+    {{ end }}
     <script src="{{ $gsap.RelPermalink }}"></script>
     <script src="{{ $pexels.RelPermalink }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/fslightbox/index.js"></script>

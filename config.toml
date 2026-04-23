@@ -61,6 +61,7 @@ defaultContentLanguageInSubdir = false
   writeStats = true
 
 [params]
+enable_dynamic_colors = false
 name = "iHydro M&D Lab"
 firstName = "iHydro M&D Lab"
 # lastName = "Cordero"
@@ -73,11 +74,13 @@ og_image = "images/felipecordero-og.png"
 description = "iHydro M&D Research Group at Texas Tech University focuses on integrated hydrological modeling and data-driven water resources management. Our research advances uncertainty quantification, management scenario analysis, and decision-support frameworks to support sustainable water and environmental systems."
 
 linkedin_url = "https://www.linkedin.com/in/spark-hydro"
-linkedin_text = "linkedin.com/in/felipe-cordero-osorio"
+linkedin_text = "linkedin.com/in/spark-hydro"
 github_url = "https://github.com/spark-hydro"
 github_text = "github.com/spark-hydro"
 
-calendly_url = "https://calendly.com/mail-felipecordero/30min"
+calendly_url = "https://outlook.office.com/bookwithme/user/ad0eb57f879e4dc798a270638694946c@ttu.edu/meetingtype/ZcsLT8XN30ie_INqJQ9PFQ2?anonymous&ismsaljsauthenabled&ep=mlink"
+calendly_text = "Book time to meet with me"
+
 calendly_height = "700px"
 
 copyright = "Seonggyu Park"
@@ -87,13 +90,23 @@ resume_url_en = "/files/Felipe_Cordero_CV_English_version.pdf"
 resume_url_fr = "/files/Felipe_Cordero_CV_French_version.pdf"
 resume_label = "View CV"
 
+hero_primary_button_url = "/research/"
+hero_primary_button_label = "Explore Our Projects"
+
+hero_secondary_button_url = "/team/"
+hero_secondary_button_label = "Meet the Team"
+
+hero_third_button_url = "/spark-cv/"
+hero_third_button_label = "test"
+
+
 # Form and Pexels: set in config or config.local.toml. CI: HUGO_PARAMS_FORMSPREEENDPOINT, HUGO_PARAMS_PEXELSAPIKEY (no underscores)
 formspreeendpoint = ""
 pexelsapikey = ""
 
 [[params.social]]
 icon = "linkedin-in"
-url = "https://www.linkedin.com/in/felipe-cordero-osorio/"
+url = "https://www.linkedin.com/in/spark-hydro/"
 
 [[params.social]]
 icon = "github"
@@ -205,3 +218,17 @@ sectionPagesMenu = 'main'
     # "nebula nasa pictures",
     # "artificial intelligence",
   ]
+
+[params.home_sections]
+  hero = true
+  about = false
+  skills = false
+  experience = false
+  technical = false
+  testimonials = false
+  contact = false
+
+[params.brand_palette]
+  primary = "#2f3c5e"
+  secondary = "#3B82F6"
+  accent = "#b53f00"
