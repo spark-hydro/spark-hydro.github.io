@@ -119,7 +119,7 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 
 ## 📫 Contact
 
-For any questions or suggestions, please open an issue in the GitHub repository or visit [felipecordero.com](https://felipecordero.com).
+For any questions or suggestions, please open an issue in the GitHub repository or visit [felipecordero.com](https://spark-hydro.github.io).
 
 ## 🚨 Important Note
 

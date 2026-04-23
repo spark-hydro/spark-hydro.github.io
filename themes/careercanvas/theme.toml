@@ -3,14 +3,14 @@ license = "MIT"
 licenselink = "https://github.com/felipecordero/careercanvas/blob/main/LICENSE"
 description = "A modern, responsive Hugo theme for personal websites and portfolios"
 homepage = "https://github.com/felipecordero/careercanvas"
-demosite = "https://felipecordero.com"
+demosite = "https://spark-hydro.github.io"
 tags = ["blog", "portfolio", "personal", "responsive", "modern", "career", "resume"]
 features = ["responsive", "blog", "portfolio", "dark mode", "resume", "career showcase"]
 min_version = "0.110.0"
 
 [author]
-  name = "Felipe Cordero"
-  homepage = "https://felipecordero.com" 
+  name = "Seonggyu Park"
+  homepage = "https://spark-hydro.github.io" 
 
 # Theme Configuration
 # Note: Colors are now defined in config.toml for better user control

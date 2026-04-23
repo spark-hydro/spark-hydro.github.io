@@ -1,14 +1,14 @@
 # CareerCanvas Hugo Theme
 
-A responsive Hugo theme for personal portfolios (Felipe Cordero). Dark mode, Tailwind CSS, configurable colors, portfolio galleries, blog, skills, experience timeline, contact, multilingual (EN/FR).
+A responsive Hugo theme for personal portfolios (Seonggyu Park). Dark mode, Tailwind CSS, configurable colors, portfolio galleries, blog, skills, experience timeline, contact, multilingual (EN/FR).
 
 ## Easiest way to run this theme
 
-Use the **[Portfolio repo (Felipe Cordero)](https://github.com/felipecordero/felipecordero.github.io)** and follow its [README](https://github.com/felipecordero/felipecordero.github.io#readme) for setup, dev server (`npm run dev`), and production build.
+Use the **[Portfolio repo (Seonggyu Park)](https://github.com/felipecordero/felipecordero.github.io)** and follow its [README](https://github.com/felipecordero/felipecordero.github.io#readme) for setup, dev server (`npm run dev`), and production build.
 
 ## Demo
 
-[felipecordero.com](https://felipecordero.com)
+[felipecordero.com](https://spark-hydro.github.io)
 
 ![CareerCanvas screenshot](images/screenshot.png)
 
@@ -34,4 +34,4 @@ Set `theme = "careercanvas"` and add `[params]` (name, tagline, profile_image, s
 
 ## License
 
-MIT — see [LICENSE](LICENSE). Issues and contact: [GitHub](https://github.com/felipecordero/careercanvas) / [felipecordero.com](https://felipecordero.com).
+MIT — see [LICENSE](LICENSE). Issues and contact: [GitHub](https://github.com/felipecordero/careercanvas) / [felipecordero.com](https://spark-hydro.github.io).

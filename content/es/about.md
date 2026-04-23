@@ -3,7 +3,7 @@ title: "Sobre mí"
 type: "homepage"
 featured_image: "/images/felipe-cordero-profile.jpeg"
 intro: >-
-  ¡Hola! Soy Felipe Cordero, **ingeniero estructural, IA y desarrollador full stack** 🏗️🤖💻 con **más de 14 años** en AEC y desarrollo de software. Mi camino me llevó de **Chile a Montréal**, donde combino la ingeniería tradicional con tecnología moderna para resolver problemas complejos. Actualmente en <a href="https://fireraven.ai" target="_blank" rel="noopener noreferrer"><strong>Fireraven</strong></a>, desarrollo soluciones de seguridad y cumplimiento para agentes de IA basados en LLM. Recientemente fui reconocido con la **Beca de Excelencia Académica** (Air Canada, Collège LaSalle Montréal, 2025) 🏆 por mis logros en IA/ML.
+  ¡Hola! Soy Seonggyu Park, **ingeniero estructural, IA y desarrollador full stack** 🏗️🤖💻 con **más de 14 años** en AEC y desarrollo de software. Mi camino me llevó de **Chile a Montréal**, donde combino la ingeniería tradicional con tecnología moderna para resolver problemas complejos. Actualmente en <a href="https://fireraven.ai" target="_blank" rel="noopener noreferrer"><strong>Fireraven</strong></a>, desarrollo soluciones de seguridad y cumplimiento para agentes de IA basados en LLM. Recientemente fui reconocido con la **Beca de Excelencia Académica** (Air Canada, Collège LaSalle Montréal, 2025) 🏆 por mis logros en IA/ML.
 
 study: >-
   Actualmente, desde **Montréal** 🇨🇦, profundizo en **Inteligencia Artificial y Aprendizaje Automático** 🤖 en **Collège LaSalle**. Trabajo con **Python** 🐍, **PyTorch** y **modelamiento predictivo** 📊 para construir sistemas inteligentes que conecten la ingeniería con la ciencia de datos.
