@@ -127,36 +127,54 @@ document.addEventListener('DOMContentLoaded', function () {
       <!-- Left content - Hero slider -->
       <div class="w-full lg:w-1/2 flex justify-center lg:justify-start mt-8 md:mt-0">
         <div class="relative w-full max-w-2xl" id="heroSlider">
+          {{ $lang := .Site.Language.Lang }}
+          {{ $slides := index site.Data $lang "hero_slides" }}
+          {{ if not $slides }}
+            {{ $slides = index site.Data "en" "hero_slides" }}
+          {{ end }}
+
           <div class="relative overflow-hidden rounded-2xl shadow-2xl" style="height: 420px;">
-            <div class="hero-slide absolute inset-0" style="opacity: 1; transition: opacity 1.2s ease-in-out;">
-              <img src="/images/hero/team1.jpg" class="absolute inset-0 w-full h-full object-cover" alt="Lab team photo 1">
-              <div class="absolute inset-x-0 bottom-0 p-6 text-white" style="background: linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0));">
-                <!-- <h3 class="text-2xl md:text-3xl font-bold">Spring 2025 Lab Brunch</h3>
-                <p class="text-lg md:text-xl">Feb 2025, iHydro M&amp;D Lab team gathering.</p> -->
-              </div>
-            </div>
+            {{ range $index, $slide := $slides }}
+            <div class="hero-slide absolute inset-0" style="opacity: {{ if eq $index 0 }}1{{ else }}0{{ end }}; transition: opacity 1.2s ease-in-out;">
+              <img src="{{ $slide.image }}" class="absolute inset-0 w-full h-full object-cover" alt="{{ $slide.title }}">
+<div class="absolute inset-x-0 bottom-0 p-6 text-white" style="background: linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0));">
+  {{ $hasReadMore := $slide.read_more }}
+  <div class="w-full">
+    <div class="flex items-end justify-end gap-4">
+      
+      <div class="{{ if $hasReadMore }}w-3/5{{ else }}w-2/3{{ end }}">
+        {{ if $slide.title }}
+        <h3 class="text-2xl md:text-3xl font-bold text-left">{{ $slide.title }}</h3>
+        {{ end }}
 
-            <div class="hero-slide absolute inset-0" style="opacity: 0; transition: opacity 1.2s ease-in-out;">
-              <img src="/images/hero/team2.jpg" class="absolute inset-0 w-full h-full object-cover" alt="Lab team photo 2">
-              <div class="absolute inset-x-0 bottom-0 p-6 text-white" style="background: linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0));">
-                <!-- <h3 class="text-2xl md:text-3xl font-bold">Field Visit</h3>
-                <p class="text-lg md:text-xl">Team visit and discussion in the field.</p> -->
-              </div>
-            </div>
+        {{ if $slide.description }}
+        <p class="text-lg md:text-xl text-left">{{ $slide.description }}</p>
+        {{ end }}
+      </div>
 
-            <div class="hero-slide absolute inset-0" style="opacity: 0; transition: opacity 1.2s ease-in-out;">
-              <img src="/images/hero/team3.jpg" class="absolute inset-0 w-full h-full object-cover" alt="Lab team photo 3">
-              <div class="absolute inset-x-0 bottom-0 p-6 text-white" style="background: linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0));">
-                <!-- <h3 class="text-2xl md:text-3xl font-bold">Research Collaboration</h3>
-                <p class="text-lg md:text-xl">Collaborative work and lab activities.</p> -->
-              </div>
+      {{ if $hasReadMore }}
+      <div class="w-auto flex justify-end">
+        <a href="{{ $slide.read_more }}" class="inline-block px-2 py-1 rounded-lg text-sm font-semibold border border-white/70 bg-white/10 hover:bg-white/20 transition-colors whitespace-nowrap">
+          Read More
+        </a>
+      </div>
+      {{ end }}
+
+    </div>
+  </div>
+</div>
             </div>
+            {{ end }}
           </div>
-
           <div class="flex justify-center gap-3 mt-4 relative z-20">
-            <button type="button" class="hero-dot block w-4 h-4 rounded-full border border-white bg-white opacity-90" data-slide="0" aria-label="Go to slide 1"></button>
-            <button type="button" class="hero-dot block w-4 h-4 rounded-full border border-white bg-white/50 opacity-90" data-slide="1" aria-label="Go to slide 2"></button>
-            <button type="button" class="hero-dot block w-4 h-4 rounded-full border border-white bg-white/50 opacity-90" data-slide="2" aria-label="Go to slide 3"></button>
+            {{ range $index, $slide := $slides }}
+            <button
+              type="button"
+              class="hero-dot block w-4 h-4 rounded-full border border-white {{ if eq $index 0 }}bg-white{{ else }}bg-white/50{{ end }} opacity-90"
+              data-slide="{{ $index }}"
+              aria-label="Go to slide {{ add $index 1 }}">
+            </button>
+            {{ end }}
           </div>
         </div>
       </div>
