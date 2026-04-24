@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', function () {
                   <div style="display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 0.75rem; align-items: end;">
                     <div style="min-width: 0;">
                       {{ if $slide.title }}
-                      <h3 class="text-xl md:text-xl font-bold text-left">
+                      <h3 class="text-lg md:text-lg font-bold text-left">
                         {{ $slide.title }}
                       </h3>
 
@@ -161,12 +161,12 @@ document.addEventListener('DOMContentLoaded', function () {
                       {{ end }}
 
                       {{ if $slide.description }}
-                      <p class="text-sm md:text-base text-left">{{ $slide.description }}</p>
+                      <p style="line-height: 1.1;" class="text-xs md:text-sm text-left mt-1">{{ $slide.description }}</p>
                       {{ end }}
                     </div>
 
                     <div>
-                      <a href="{{ $slide.read_more }}" class="inline-block px-1.5 py-1 rounded-lg text-xs md:text-base font-semibold border border-white/70 bg-white/10 hover:bg-white/20 transition-colors whitespace-nowrap">
+                      <a href="{{ $slide.read_more }}" class="inline-block px-1.5 py-1 rounded-lg text-xs md:text-xs font-semibold border border-white/70 bg-white/10 hover:bg-white/20 transition-colors whitespace-nowrap">
                         Read More
                       </a>
                     </div>
@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function () {
               {{ else }}
               <div style="min-width: 0;">
                 {{ if $slide.title }}
-                <h3 class="text-xl md:text-2xl font-bold text-left">
+                <h3 class="text-lg md:text-lg font-bold text-left">
                   {{ $slide.title }}
                 </h3>
                 {{ end }}
@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 {{ end }}
 
                 {{ if $slide.description }}
-                <p class="text-sm md:text-base text-left">{{ $slide.description }}</p>
+                <p style="line-height: 1.1;" class="text-xs md:text-sm text-left mt-1">{{ $slide.description }}</p>
                 {{ end }}
               </div>
               {{ end }}
