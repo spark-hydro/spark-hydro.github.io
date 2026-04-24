@@ -229,6 +229,6 @@ sectionPagesMenu = 'main'
   contact = false
 
 [params.brand_palette]
-  primary = "#2f3c5e"
+  primary = "#363b47"
   secondary = "#3B82F6"
-  accent = "#b53f00"
+  accent = "#ff0000"

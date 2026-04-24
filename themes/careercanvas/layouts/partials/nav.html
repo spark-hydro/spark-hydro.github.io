@@ -2,7 +2,10 @@
   <div class="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
     <div class="flex justify-between h-16">
       <div class="flex items-center">
-        <a href="{{ .Site.Home.RelPermalink }}" class="text-3xl font-bold text-text-primary dark:text-text-primary font-heading">{{ .Site.Params.firstName }} {{ .Site.Params.lastName }}</a>
+        <a href="{{ .Site.Home.RelPermalink }}" class="flex items-center">
+          <img src="/images/logo/logo-light.png" alt="iHydro M&D Lab" class="block dark:hidden h-8 w-auto">
+          <img src="/images/logo/logo-dark.png" alt="iHydro M&D Lab" class="hidden dark:block h-8 w-auto">
+        </a>      
       </div>
       <div class="hidden lg:flex items-center space-x-6">
         {{ range .Site.Menus.main }}

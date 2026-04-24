@@ -1,96 +1,207 @@
-<section id="home" class="flex items-center justify-center gradient-bg text-white relative overflow-hidden hero-section">
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const slider = document.getElementById('heroSlider');
+  if (!slider) return;
+
+  const slides = slider.querySelectorAll('.hero-slide');
+  const dots = slider.querySelectorAll('.hero-dot');
+  let currentIndex = 0;
+  let intervalId;
+
+  function showSlide(index) {
+    currentIndex = index;
+
+    slides.forEach((slide, i) => {
+      slide.style.opacity = (i === index) ? '1' : '0';
+    });
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('bg-white', i === index);
+      dot.classList.toggle('bg-white/50', i !== index);
+    });
+  }
+
+  function nextSlide() {
+    const nextIndex = (currentIndex + 1) % slides.length;
+    showSlide(nextIndex);
+  }
+
+  function startAutoSlide() {
+    intervalId = setInterval(nextSlide, 4000);
+  }
+
+  function resetAutoSlide() {
+    clearInterval(intervalId);
+    startAutoSlide();
+  }
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', function () {
+      showSlide(index);
+      resetAutoSlide();
+    });
+  });
+
+  showSlide(0);
+  startAutoSlide();
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  if (typeof particlesJS !== 'undefined' && document.getElementById('particles-js')) {
+    particlesJS('particles-js', {
+      particles: {
+        number: {
+          value: 80,
+          density: { enable: true, value_area: 800 }
+        },
+        color: {
+          value: '#8a8a8a'
+        },
+        shape: {
+          type: 'circle'
+        },
+        opacity: {
+          value: 0.5,
+          random: true
+        },
+        size: {
+          value: 3,
+          random: true
+        },
+        line_linked: {
+          enable: true,
+          distance: 140,
+          color: '#8a8a8a',
+          opacity: 0.5,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 1.2,
+          direction: 'none',
+          random: false,
+          straight: false,
+          out_mode: 'out',
+          bounce: false
+        }
+      },
+      interactivity: {
+        detect_on: 'canvas',
+        events: {
+          onhover: {
+            enable: true,
+            mode: 'grab'
+          },
+          onclick: {
+            enable: true,
+            mode: 'push'
+          },
+          resize: true
+        },
+        modes: {
+          grab: {
+            distance: 140,
+            line_linked: {
+              opacity: 0.35
+            }
+          },
+          push: {
+            particles_nb: 3
+          }
+        }
+      },
+      retina_detect: true
+    });
+  }
+});
+</script>
+
+
+<section id="home" class="flex items-center justify-center gradient-bg relative overflow-hidden hero-section">
+  <div id="particles-js" class="absolute inset-0 z-0"></div>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-16">
     <div class="flex flex-col lg:flex-row items-center justify-between gap-12 w-full">
-      <!-- Left content - Profile image -->
-      <div class="lg:w-1/2 flex justify-center lg:justify-start mt-8 md:mt-0">
-        <div class="relative" data-animation="profile-image">
-          <!-- Main image container -->
-          <div class="relative">
-            <div class="w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-primary p-1 shadow-2xl">
-              <div class="w-full h-full rounded-full overflow-hidden bg-white">
-                <img 
-                  src="{{ .Site.Params.profile_image }}" 
-                  alt="Portrait of {{ .Site.Params.name }}" 
-                  loading="lazy" 
-                  decoding="async" 
-                  class="object-cover w-full h-full rounded-full"
-                />
-              </div>
-            </div>
 
-            <!-- Location badge -->
-            <div class="absolute -bottom-4 -right-4" data-animation="location-badge">
-              <div class="flex items-center bg-black/80 backdrop-blur-sm text-white px-4 py-2 rounded-full shadow-xl border border-white/20 min-w-fit whitespace-nowrap">
-                <i class="fas fa-map-marker-alt mr-2 text-primary-light flex-shrink-0"></i>
-                <span class="font-semibold text-sm">{{ .Site.Params.hero_location }}</span>
-              </div>
-            </div>
+      <!-- Left content - Hero slider -->
+      <div class="lg:w-1/2 flex justify-center lg:justify-start mt-8 md:mt-0">
+        <div class="relative w-full max-w-2xl" id="heroSlider">
+          <div class="relative overflow-hidden rounded-2xl shadow-2xl" style="height: 420px;">
+            <img src="/images/hero/team1.jpg" class="hero-slide absolute inset-0 w-full h-full object-cover" style="opacity: 1; transition: opacity 1.2s ease-in-out;" alt="Lab team photo 1">
+            <img src="/images/hero/team2.jpg" class="hero-slide absolute inset-0 w-full h-full object-cover" style="opacity: 0; transition: opacity 1.2s ease-in-out;" alt="Lab team photo 2">
+            <img src="/images/hero/team3.jpg" class="hero-slide absolute inset-0 w-full h-full object-cover" style="opacity: 0; transition: opacity 1.2s ease-in-out;" alt="Lab team photo 3">
+          </div>
+
+          <div class="flex justify-center gap-3 mt-4 relative z-20">
+            <button type="button" class="hero-dot block w-4 h-4 rounded-full border border-white bg-white opacity-90" data-slide="0" aria-label="Go to slide 1"></button>
+            <button type="button" class="hero-dot block w-4 h-4 rounded-full border border-white bg-white/50 opacity-90" data-slide="1" aria-label="Go to slide 2"></button>
+            <button type="button" class="hero-dot block w-4 h-4 rounded-full border border-white bg-white/50 opacity-90" data-slide="2" aria-label="Go to slide 3"></button>
           </div>
         </div>
       </div>
+
       <!-- Right content -->
       <div class="text-center lg:text-left mt-8 md:mt-0" style="width: 100%; max-width: 600px; min-width: 300px;">
+
         <!-- Greeting -->
         <div class="mb-4 mt-4 md:mt-0 hero-text-element" data-animation="greeting">
-          <span class="hero-text-accent font-medium text-3xl block">{{ i18n "helloIm" }}</span>
+          <span class="block dark:hidden font-medium text-3xl text-gray-900">{{ i18n "helloIm" }}</span>
+          <span class="hidden dark:block font-medium text-3xl text-white">{{ i18n "helloIm" }}</span>
         </div>
-        <!-- Name -->
-        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 font-heading leading-tight hero-name hero-text-element" data-animation="name">
-          <!-- {{ .Site.Params.firstName }} {{ .Site.Params.lastName }} -->
-          <span class="text-5xl md:text-6xl lg:text-6xl">{{ .Site.Params.firstName }}</span> {{ .Site.Params.lastName }}
-        </h1>
+
+        <!-- Name / Logo -->
+        <div class="mb-6 hero-name hero-text-element flex justify-center lg:justify-center" data-animation="name">
+          <img src="/images/logo/logo-light.png" alt="iHydro M&D Lab" class="block dark:hidden w-auto" style="height: 160px;">
+          <img src="/images/logo/logo-dark.png" alt="iHydro M&D Lab" class="hidden dark:block w-auto" style="height: 160px;">
+        </div>
+
+        <!-- What we do -->
         <div class="mb-1 mt-4 md:mt-0 hero-text-element" data-animation="greeting">
-          <span class="hero-text-accent font-medium text-2xl block">{{ i18n "whatWeDo" }}</span>
+          <span class="block dark:hidden font-medium text-2xl text-gray-900">{{ i18n "whatWeDo" }}</span>
+          <span class="hidden dark:block font-medium text-2xl text-white">{{ i18n "whatWeDo" }}</span>
         </div>
-        <!-- Tagline with typing effect -->
-        <h2 class="text-2xl md:text-3xl lg:text-4xl mb-6 font-light hero-text-accent hero-text-element" data-animation="tagline">
-          <span class="typewriter" data-original-text="{{ .Site.Params.tagline }}">{{ .Site.Params.tagline }}</span>
-        </h2>
+
+        <!-- Tagline -->
+        <div class="mb-6 hero-text-element" data-animation="tagline">
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-light text-gray-900 dark:text-white">
+            <span class="typewriter" data-original-text="{{ .Site.Params.tagline }}">{{ .Site.Params.tagline }}</span>
+          </h2>
+        </div>
+
         <!-- Description -->
-        <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto lg:mx-0 hero-text-muted leading-relaxed hero-text-element px-4 py-3 rounded-lg" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(8px);" data-animation="description">
-          {{ .Site.Params.hero_description }}
-        </p>
+        <div class="hero-text-element" data-animation="description">
+          <p class="block dark:hidden text-lg md:text-xl mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed text-gray-900 px-4 py-3 rounded-lg"
+             style="background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(8px);">
+            {{ .Site.Params.hero_description }}
+          </p>
+
+          <p class="hidden dark:block text-lg md:text-xl mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed text-white px-4 py-3 rounded-lg"
+             style="background: rgba(255, 255, 255, 0.10); backdrop-filter: blur(8px);">
+            {{ .Site.Params.hero_description }}
+          </p>
+        </div>
 
         <!-- Action buttons -->
         <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-end hero-text-element" data-animation="buttons">
           {{ if .Site.Params.hero_primary_button_url }}
-            <a href="{{ .Site.Params.hero_primary_button_url }}" class="bg-bg text-primary dark:text-white px-8 py-4 rounded-lg font-semibold hero-button button-hover">
+            <a href="{{ .Site.Params.hero_primary_button_url }}"
+               class="px-8 py-4 rounded-lg font-semibold hero-button button-hover text-gray-900 dark:text-white"
+               style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(8px);">
               {{ .Site.Params.hero_primary_button_label }}
             </a>
           {{ end }}
 
           {{ if .Site.Params.hero_secondary_button_url }}
-            <a href="{{ .Site.Params.hero_secondary_button_url }}" target="_blank" rel="noopener" class="bg-bg text-primary dark:text-white px-8 py-4 rounded-lg font-semibold hero-button button-hover">
+            <a href="{{ .Site.Params.hero_secondary_button_url }}" target="_blank" rel="noopener"
+               class="px-8 py-4 rounded-lg font-semibold hero-button button-hover text-gray-900 dark:text-white"
+               style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(8px);">
               {{ .Site.Params.hero_secondary_button_label }}
             </a>
           {{ end }}
+        </div>
 
-          {{ if .Site.Params.hero_third_button_url }}
-            <a href="{{ .Site.Params.hero_third_button_url }}" target="_blank" rel="noopener" class="bg-bg text-primary dark:text-white px-8 py-4 rounded-lg font-semibold hero-button button-hover">
-              {{ .Site.Params.hero_third_button_label }}
-            </a>
-          {{ end }}
-        </div>
-        <!-- Social links -->
-        <div class="flex justify-center lg:justify-end mt-8 mb-8 md:mb-0 hero-text-element" data-animation="social">
-          <div class="flex space-x-4 px-4 py-3 rounded-lg" style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(8px);">
-            {{ range .Site.Params.social }}
-            <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="text-white transition-transform duration-300 hover:scale-125">
-              <i class="fab fa-{{ .icon }} text-3xl"></i>
-            </a>
-            {{ end }}
-          </div>
-        </div>
       </div>
     </div>
   </div>
-
-  <a
-    id="pexels-credit"
-    class="pexels-credit"
-    href="https://www.pexels.com"
-    target="_blank"
-    rel="noopener noreferrer"
-  >Photo / Pexels</a>
 </section>
-  

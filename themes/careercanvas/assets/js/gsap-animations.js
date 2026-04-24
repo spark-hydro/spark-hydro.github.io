@@ -168,7 +168,7 @@ function initializeHeroAnimations() {
     initMouseTracking(heroSection);
     
     // Initialize background shapes
-    initSectionBackgroundAnimations('.hero-section', ANIMATION_CONFIG.hero);
+  // initSectionBackgroundAnimations('.hero-section', ANIMATION_CONFIG.hero);
     
     // Initialize typewriter effect
     initTypingEffect();

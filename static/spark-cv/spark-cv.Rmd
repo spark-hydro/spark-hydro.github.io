@@ -212,7 +212,7 @@ cat(header)
 <div id = "block_container">
 <div class = "first2", id="bloc1">Assistant</div>
 <div class = "last2", id="bloc2">Professor</div>
-<div class = "last2-1", id="bloc1">of Hydrologic Modeling</div>
+<div class = "last2-1", id="bloc2">of Hydrologic Modeling</div>
 </div>
 </div>
 
