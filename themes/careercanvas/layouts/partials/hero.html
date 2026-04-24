@@ -143,7 +143,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="w-full">
                   <div class="flex items-end justify-end gap-3">
                     
-                    <div class="{{ if $hasReadMore }}w-3/5{{ else }}w-2/3{{ end }}">
+                    {{ if $hasReadMore }}
+                    <div class="w-3/5">
                       {{ if $slide.title }}
                       <h3 class="text-xl md:text-2xl font-bold text-left">
                         {{ $slide.title }}
@@ -157,6 +158,22 @@ document.addEventListener('DOMContentLoaded', function () {
                       <p class="text-sm md:text-base text-left">{{ $slide.description }}</p>
                       {{ end }}
                     </div>
+                    {{ else }}
+                    <div class="w-2/3">
+                      {{ if $slide.title }}
+                      <h3 class="text-xl md:text-2xl font-bold text-left">
+                        {{ $slide.title }}
+                        {{ if $slide.date }}
+                        <span class="text-sm md:text-sm font-normal opacity-80"> 🗓️ {{ $slide.date }}</span>
+                        {{ end }}
+                      </h3>
+                      {{ end }}
+
+                      {{ if $slide.description }}
+                      <p class="text-sm md:text-base text-left">{{ $slide.description }}</p>
+                      {{ end }}
+                    </div>
+                    {{ end }}
 
                     {{ if $hasReadMore }}
                     <div class="w-auto flex justify-end">
