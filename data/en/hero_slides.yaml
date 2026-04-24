@@ -1,11 +1,13 @@
 - title: "Fall 2025 RDA Project Meeting"
   date: "2025-11-03"
+  location: "Lubbock, Texas"
   image: "/images/hero/4276_v02.jpg"
   description: "Water, Impact, and Sustainability Estimator (WISE) for Predicting and Adapting to Drought and Flood Risks in Crop Cultivation Under Climate Change"
   read_more: "/team/"
 
 - title: "Korea University Visit"
   date: "2026-01-21"
+  location: "Lubbock, Texas"
   image: "/images/hero/20260121_v02.jpg"
   description: "Meeting with Korea University students and faculty to discuss research collaborations and future projects"
   # read_more: "/research/" 
@@ -18,6 +20,7 @@
 
 - title: "TxPWC Mid-Year Review Members Meeting"
   date: "2026-01-08"
+  location: "Lubbock, Texas"
   image: "/images/hero/20260108_084047.jpg"
   description: "TxPWC Tour and Educational Session on Research Activities at Texas Tech University Facilities and Laboratories"
 
@@ -40,18 +43,21 @@
 
 - title: "2026 TTU Undergraduate Research Conference"
   date: "2026-04-08"
+  location: "Lubbock, Texas"
   image: "/images/hero/jishu_poster01.jpeg"
-  description: "Aunjisu presented her poster on spatiotemporal drought analysis in the present and future using the SPI and SPEI indices in the Pecos River watershed."
+  description: "Aunjishu presented her poster on spatiotemporal drought analysis in the present and future using the SPI and SPEI indices in the Pecos River watershed."
   read_more: "/research/"
 
 - title: "2026 TTU Undergraduate Research Conference"
   date: "2026-04-08"
+  location: "Lubbock, Texas"
   image: "/images/hero/jishu_poster02.jpg"
-  description: "Aunjisu presented her poster on spatiotemporal drought analysis in the present and future using the SPI and SPEI indices in the Pecos River watershed."
+  description: "Aunjishu presented her poster on spatiotemporal drought analysis in the present and future using the SPI and SPEI indices in the Pecos River watershed."
   read_more: "/research/"
 
 - title: "2026 TTU Undergraduate Research Conference"
   date: "2026-04-08"
+  # location: "Lubbock, Texas"
   image: "/images/hero/jishu_poster03.jpg"
-  description: "Aunjisu presented her poster on spatiotemporal drought analysis in the present and future using the SPI and SPEI indices in the Pecos River watershed."
+  description: "Aunjishu presented her poster on spatiotemporal drought analysis in the present and future using the SPI and SPEI indices in the Pecos River watershed."
   read_more: "/research/"

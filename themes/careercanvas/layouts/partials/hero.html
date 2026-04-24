@@ -138,54 +138,63 @@ document.addEventListener('DOMContentLoaded', function () {
             {{ range $index, $slide := $slides }}
             <div class="hero-slide absolute inset-0" style="opacity: {{ if eq $index 0 }}1{{ else }}0{{ end }}; transition: opacity 1.2s ease-in-out;">
               <img src="{{ $slide.image }}" class="absolute inset-0 w-full h-full object-cover" alt="{{ $slide.title }}">
+              
               <div class="absolute inset-x-0 bottom-0 p-3 text-white" style="background: linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0));">
                 {{ $hasReadMore := $slide.read_more }}
-                <div class="w-full">
-                  <div class="flex items-end justify-end gap-3">
-                    
-                    {{ if $hasReadMore }}
-                    <div class="w-3/5">
+
+                <div style="margin-left: auto; width: min(36rem, 100%);">
+                  {{ if $hasReadMore }}
+                  <div style="display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 0.75rem; align-items: end;">
+                    <div style="min-width: 0;">
                       {{ if $slide.title }}
-                      <h3 class="text-xl md:text-2xl font-bold text-left">
+                      <h3 class="text-xl md:text-xl font-bold text-left">
                         {{ $slide.title }}
-                        {{ if $slide.date }}
-                        <span class="text-sm md:text-sm font-normal opacity-80"> 🗓️ {{ $slide.date }}</span>
-                        {{ end }}
                       </h3>
+
+                        {{ if or $slide.date $slide.location }}
+                        <p class="text-xs md:text-sm font-normal opacity-80 text-left">
+                          {{ if $slide.date }}🗓️ {{ $slide.date }}{{ end }}
+                          {{ if and $slide.date $slide.location }} &nbsp;•&nbsp; {{ end }}
+                          {{ if $slide.location }}📍 {{ $slide.location }}{{ end }}
+                        </p>
+                        {{ end }}
                       {{ end }}
 
                       {{ if $slide.description }}
                       <p class="text-sm md:text-base text-left">{{ $slide.description }}</p>
                       {{ end }}
                     </div>
-                    {{ else }}
-                    <div class="w-2/3">
-                      {{ if $slide.title }}
-                      <h3 class="text-xl md:text-2xl font-bold text-left">
-                        {{ $slide.title }}
-                        {{ if $slide.date }}
-                        <span class="text-sm md:text-sm font-normal opacity-80"> 🗓️ {{ $slide.date }}</span>
-                        {{ end }}
-                      </h3>
-                      {{ end }}
 
-                      {{ if $slide.description }}
-                      <p class="text-sm md:text-base text-left">{{ $slide.description }}</p>
-                      {{ end }}
-                    </div>
-                    {{ end }}
-
-                    {{ if $hasReadMore }}
-                    <div class="w-auto flex justify-end">
+                    <div>
                       <a href="{{ $slide.read_more }}" class="inline-block px-1.5 py-1 rounded-lg text-xs md:text-base font-semibold border border-white/70 bg-white/10 hover:bg-white/20 transition-colors whitespace-nowrap">
                         Read More
                       </a>
                     </div>
-                    {{ end }}
-
                   </div>
+              {{ else }}
+              <div style="min-width: 0;">
+                {{ if $slide.title }}
+                <h3 class="text-xl md:text-2xl font-bold text-left">
+                  {{ $slide.title }}
+                </h3>
+                {{ end }}
+
+                {{ if or $slide.date $slide.location }}
+                <p class="text-xs md:text-sm font-normal opacity-80 text-left">
+                  {{ if $slide.date }}🗓️ {{ $slide.date }}{{ end }}
+                  {{ if and $slide.date $slide.location }} &nbsp;•&nbsp; {{ end }}
+                  {{ if $slide.location }}📍 {{ $slide.location }}{{ end }}
+                </p>
+                {{ end }}
+
+                {{ if $slide.description }}
+                <p class="text-sm md:text-base text-left">{{ $slide.description }}</p>
+                {{ end }}
+              </div>
+              {{ end }}
                 </div>
               </div>
+
             </div>
             {{ end }}
           </div>
