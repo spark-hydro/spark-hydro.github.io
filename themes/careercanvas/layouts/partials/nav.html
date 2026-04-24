@@ -36,42 +36,35 @@
         <!-- Language Switcher (Dropdown) -->
         {{ $homes := $.Site.Home.AllTranslations }}
         {{ if gt (len $homes) 1 }}
-        {{/* Determine current language flag */}}
         {{ $cur := $.Site.Language.Lang }}
         {{ $currentFlag := "🏳️" }}
-        {{ if eq $cur "en" }}{{ $currentFlag = "🇬🇧" }}{{ end }}
-        {{ if eq $cur "es" }}{{ $currentFlag = "🇨🇱" }}{{ end }}
-        {{ if eq $cur "fr" }}{{ $currentFlag = "🇫🇷" }}{{ end }}
-        {{ if eq $cur "bg" }}{{ $currentFlag = "🇧🇬" }}{{ end }}
+        {{ if eq $cur "en" }}{{ $currentFlag = "🇺🇸" }}{{ end }}
+        {{ if eq $cur "ko" }}{{ $currentFlag = "🇰🇷" }}{{ end }}
         <div class="relative group">
           <a href="#" class="nav-link text-text-primary dark:text-text-primary flex items-center" aria-label="Language switcher">
             <span class="text-lg mr-1">{{ $currentFlag }}</span>
             <i class="fas fa-chevron-down ml-1 text-sm"></i>
           </a>
           <div class="submenu absolute right-0 top-full mt-2 bg-bg dark:bg-bg shadow-lg rounded-lg z-50 min-w-[8rem] opacity-0 invisible">
-            {{ $order := slice "fr" "en" "es" "bg" }}
+            {{ $order := slice "en" "ko" }}
             {{ range $order }}
               {{ $code := . }}
               {{ range where $homes "Language.Lang" $code }}
                 {{ $lang := .Language.Lang }}
                 {{ $flag := "🏳️" }}
-                {{ if eq $lang "fr" }}{{ $flag = "🇫🇷" }}{{ end }}
-                {{ if eq $lang "en" }}{{ $flag = "🇬🇧" }}{{ end }}
-                {{ if eq $lang "es" }}{{ $flag = "🇨🇱" }}{{ end }}
-                {{ if eq $lang "bg" }}{{ $flag = "🇧🇬" }}{{ end }}
-                {{/* Check if current page has a translation in this language */}}
+                {{ if eq $lang "en" }}{{ $flag = "🇺🇸" }}{{ end }}
+                {{ if eq $lang "ko" }}{{ $flag = "🇰🇷" }}{{ end }}
+
                 {{ $targetURL := .RelPermalink }}
-                {{ $hasTranslation := false }}
                 {{ if $.Page.IsTranslated }}
                   {{ range $.Page.Translations }}
                     {{ if eq .Language.Lang $lang }}
                       {{ $targetURL = .RelPermalink }}
-                      {{ $hasTranslation = true }}
                     {{ end }}
                   {{ end }}
                 {{ end }}
-                
-                <a href="{{ $targetURL }}" class="nav-link block px-4 py-2 text-sm text-text-primary dark:text-text-primary {{ if eq .Language.Lang $.Site.Language.Lang }}font-semibold{{ end }}">
+
+                <a href="{{ $targetURL }}" class="nav-link block px-4 py-2 text-sm text-text-primary dark:text-text-primary {{ if eq $lang $.Site.Language.Lang }}font-semibold{{ end }}">
                   <span class="mr-2">{{ $flag }}</span>{{ .Language.LanguageName }}
                 </a>
               {{ end }}
@@ -82,12 +75,12 @@
 
         <!-- Social Media Icons -->
         <div class="flex items-center space-x-4" data-animation="social">
-          {{ if .Site.Params.linkedin_url }}
+          <!-- {{ if .Site.Params.linkedin_url }}
           <a href="{{ .Site.Params.linkedin_url }}" target="_blank" rel="noopener noreferrer" class="text-text-primary dark:text-text-primary transition-transform duration-300 hover:scale-125">
             <i class="fab fa-linkedin-in text-xl"></i>
           </a>
-          {{ end }}
-          {{ if .Site.Params.github_url }}
+          {{ end }} -->
+          <!-- {{ if .Site.Params.github_url }}
           <a href="{{ .Site.Params.github_url }}" target="_blank" rel="noopener noreferrer" class="text-text-primary dark:text-text-primary transition-transform duration-300 hover:scale-125">
             <i class="fab fa-github text-xl"></i>
           </a>
@@ -97,7 +90,7 @@
           <a href="{{ .Site.Params.calendly_url }}" target="_blank" rel="noopener noreferrer" class="text-text-primary dark:text-text-primary transition-transform duration-300 hover:scale-125" aria-label="Book a meeting on Calendly">
             <img src="{{ $calendlyIcon.RelPermalink }}" alt="" class="w-6 h-6" width="24" height="24">
           </a>
-          {{ end }}
+          {{ end }} -->
         </div>
         <!-- Dark Mode Toggle -->
         <button id="darkModeToggle" class="text-text-primary dark:text-text-primary focus:outline-none">
@@ -144,16 +137,14 @@
       {{ if gt (len $homes) 1 }}
       <div class="px-3 py-2 border-t border-border-primary dark:border-border-primary">
         <div class="flex items-center space-x-3">
-          {{ $order := slice "fr" "en" "es" "bg" }}
+          {{ $order := slice "en" "ko" }}
           {{ range $order }}
             {{ $code := . }}
             {{ range where $homes "Language.Lang" $code }}
               {{ $lang := .Language.Lang }}
               {{ $flag := "🏳️" }}
-              {{ if eq $lang "fr" }}{{ $flag = "🇫🇷" }}{{ end }}
-              {{ if eq $lang "en" }}{{ $flag = "🇬🇧" }}{{ end }}
-              {{ if eq $lang "es" }}{{ $flag = "🇨🇱" }}{{ end }}
-              {{ if eq $lang "bg" }}{{ $flag = "🇧🇬" }}{{ end }}
+              {{ if eq $lang "en" }}{{ $flag = "🇺🇸" }}{{ end }}
+              {{ if eq $lang "ko" }}{{ $flag = "🇰🇷" }}{{ end }}
 
               {{/* Check if current page has a translation in this language */}}
               {{ $targetURL := .RelPermalink }}

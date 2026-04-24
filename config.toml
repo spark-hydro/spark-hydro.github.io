@@ -24,38 +24,56 @@ defaultContentLanguageInSubdir = false
         "Water Resources Management",
         "Sustainable Water Systems"
       ]
-  [languages.es]
-    contentDir = "content/es"
-    languageName = "Español"
+  [languages.ko]
+    contentDir = "content/ko"
+    languageName = "한국어"
     weight = 2
-    [languages.es.params]
-      tagline = "Ingeniero. Desarrollador de Software. Solucionador de problemas."
-      hero_description = "Ingeniero estructural, IA y desarrollador full stack con más de 14 años en Arquitectura, Ingeniería y Construcción (AEC). Creando soluciones inteligentes y de seguridad para agentes de IA basados en LLM."
-      hero_location = "Montreal, Canadá"
-      resume_url = "/files/Felipe_Cordero_CV_English_version.pdf"
+    [languages.ko.params]
+      tagline = "통합수문모델링. 불확실성 정량화. 데이터 기반 분석. 수자원 관리. 지속가능한 수자원 시스템 개발"
+      hero_description = "텍사스텍에서 iHydro M&D 연구 그룹은 통합 수문 모델링과 데이터 기반 수자원 관리를 중심으로 연구를 수행하며, 지속가능한 수자원을 위한 불확실성 정량화와 의사결정 지원 프레임워크의 발전에 기여하고 있습니다."
+      hero_location = "텍사스텍, 미국"
+      resume_url = "https://spark-hydro.github.io/spark-cv"
       collab_tags = [
-        "Soluciones de IA/ML",
-        "Software de Ingeniería",
-        "I+D e Innovación",
-        "Liderazgo Técnico",
-        "Tecnología en Construcción"
+        "통합수문모델링",
+        "불확실성 정량화",
+        "데이터 기반 분석",
+        "수자원 관리",
+        "지속가능한 수자원시스템"
       ]
-  [languages.fr]
-    contentDir = "content/fr"
-    languageName = "Français"
-    weight = 3
-    [languages.fr.params]
-      tagline = "Ingénieur. Codeur. Résolveur de problèmes."
-      hero_description = "Ingénieur structure, IA et développeur full stack avec plus de 14 ans d'expérience en architecture, ingénierie et construction (AEC). Développement de solutions de sécurité et conformité pour agents IA basés sur LLM."
-      hero_location = "Montréal, Canada"
-      resume_url = "/files/Felipe_Cordero_CV_French_version.pdf"
-      collab_tags = [
-        "Solutions IA/ML",
-        "Logiciels d'ingénierie",
-        "R&D et Innovation",
-        "Leadership technique",
-        "Technologie de construction"
-      ]
+  # [languages.es]
+  #   contentDir = "content/es"
+  #   languageName = "Español"
+  #   weight = 2
+  #   [languages.es.params]
+  #     tagline = "Ingeniero. Desarrollador de Software. Solucionador de problemas."
+  #     hero_description = "Ingeniero estructural, IA y desarrollador full stack con más de 14 años en Arquitectura, Ingeniería y Construcción (AEC). Creando soluciones inteligentes y de seguridad para agentes de IA basados en LLM."
+  #     hero_location = "Montreal, Canadá"
+  #     resume_url = "/files/Felipe_Cordero_CV_English_version.pdf"
+  #     collab_tags = [
+  #       "Soluciones de IA/ML",
+  #       "Software de Ingeniería",
+  #       "I+D e Innovación",
+  #       "Liderazgo Técnico",
+  #       "Tecnología en Construcción"
+  #     ]
+  # [languages.fr]
+  #   contentDir = "content/fr"
+  #   languageName = "Français"
+  #   weight = 3
+  #   [languages.fr.params]
+  #     tagline = "Ingénieur. Codeur. Résolveur de problèmes."
+  #     hero_description = "Ingénieur structure, IA et développeur full stack avec plus de 14 ans d'expérience en architecture, ingénierie et construction (AEC). Développement de solutions de sécurité et conformité pour agents IA basés sur LLM."
+  #     hero_location = "Montréal, Canada"
+  #     resume_url = "/files/Felipe_Cordero_CV_French_version.pdf"
+  #     collab_tags = [
+  #       "Solutions IA/ML",
+  #       "Logiciels d'ingénierie",
+  #       "R&D et Innovation",
+  #       "Leadership technique",
+  #       "Technologie de construction"
+  #     ]
+
+
 
 [build]
   writeStats = true
