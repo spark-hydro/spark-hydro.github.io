@@ -166,6 +166,13 @@
               <!-- Social Links -->
               {{ if or .github .twitter .linkedin .google_scholar }}
               <div class="flex justify-center gap-3 mt-2">
+                {{ if .resume_url }}
+                <a href="{{ .resume_url }}" target="_blank" class="text-text-secondary dark:text-text-secondary hover:text-primary dark:hover:text-primary-light transition-colors" aria-label="CV">
+                  <span class="text-sm text-text-secondary dark:text-text-secondary">
+                    <strong>View CV</strong>
+                  </span>
+                </a>
+                {{ end }}
                 {{ if .github }}
                 <a href="{{ .github }}" target="_blank" class="text-text-secondary dark:text-text-secondary hover:text-primary dark:hover:text-primary-light transition-colors">
                   <i class="fab fa-github"></i>

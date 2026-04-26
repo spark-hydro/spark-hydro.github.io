@@ -32,10 +32,11 @@ principal_investigator:
 current_members:
   - name: "Aunjishu Rahman Shrabonti"
     position: "Student Assistant"
-    photo: "/images/team/aunjishu.jpeg"
-    bio: "Undergraduate student in Environmental Engineering, trained in water quality and data anaylsis."
+    photo: "/images/team/aunjishu02.jpeg"
+    bio: "Undergraduate student in Environmental Engineering, trained in water quality and data anaylsis"
     email: "ashrabon@ttu.edu"
     read_more: "/team/aunjishu"
+    resume_url: /files/Resume-Aunjishu_Rahman_Shrabonti.pdf"
     github: "https://github.com/aunjishurahman-droid"
     linkedin: "linkedin.com/in/aunjishu-rahman-shrabonti-5bb673326"
     
