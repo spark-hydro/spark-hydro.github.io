@@ -14,6 +14,7 @@
 
 - title: "TxPWC Mid-Year Review Members Meeting"
   date: "2026-01-08"
+  location: "Lubbock, Texas"
   image: "/images/hero/team3.jpg"
   description: "TxPWC Tour and Educational Session on Research Activities at Texas Tech University Facilities and Laboratories "
   # read_more: "/research/" 
@@ -26,17 +27,20 @@
 
 - title: "TxPWC Mid-Year Review Members Meeting"
   date: "2026-01-08"
+  location: "Lubbock, Texas"
   image: "/images/hero/20260108_084437.jpg"
   description: "TxPWC Tour and Educational Session on Research Activities at Texas Tech University Facilities and Laboratories"
 
 - title: "TxPWC Mid-Year Review Members Meeting"
   date: "2026-01-07"
+  location: "Lubbock, Texas"
   image: "/images/hero/txpwc_present01.jpeg"
   description: "Presenting research findings on the hydrological impacts of applying purified produced water"
   read_more: "/research/"
 
 - title: "TxPWC Mid-Year Review Members Meeting"
   date: "2026-01-07"
+  location: "Lubbock, Texas"
   image: "/images/hero/txpwc_present02.jpeg"
   description: "Presenting research findings on the hydrological impacts of applying purified produced water"
   read_more: "/research/"
@@ -57,7 +61,7 @@
 
 - title: "2026 TTU Undergraduate Research Conference"
   date: "2026-04-08"
-  # location: "Lubbock, Texas"
+  location: "Lubbock, Texas"
   image: "/images/hero/jishu_poster03.jpg"
   description: "Aunjishu presented her poster on spatiotemporal drought analysis in the present and future using the SPI and SPEI indices in the Pecos River watershed."
   read_more: "/research/"

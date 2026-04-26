@@ -2,9 +2,11 @@
 title: "Assessing Hydrological Impacts of Purified Produced Water Reuse in the Pecos River Basin Using integrated Hydrological modeling framework"
 date: 2025-09-01
 sdate: "September 2025"
-edate: "Present"
-total_budget: $520,000
+edate: "August 2027"
+share: "$330,000"
+total_budget: $15M
 role: "Co-PI"
+pi: "Shane Walker"
 funded: "The Texas Produced Water Consortium (TxPWC), United States"
 draft: false
 description: "Developed SWAT-MODFLOW model to support resilient development and return on investment analyses in the Cubango-Okavango River Basin (CORB)"

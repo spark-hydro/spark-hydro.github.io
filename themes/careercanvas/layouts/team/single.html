@@ -31,13 +31,25 @@
           {{ if .Params.education }}
           <div class="mb-6">
             <h2 class="text-xl font-semibold text-text-primary dark:text-text-primary mb-2">Education</h2>
-            <ul class="list-disc list-inside text-text-secondary dark:text-text-secondary space-y-1">
+
+            <ul class="list-disc pl-5 text-text-secondary dark:text-text-secondary space-y-2">
               {{ range .Params.education }}
-              <li>{{ . }}</li>
+              <li>
+                <span class="font-medium">{{ .title }}</span>
+
+                {{ if .items }}
+                <ul class="pl-1 mt-1 space-y-1">
+                  {{ range .items }}
+                  <li>- {{ . }}</li>
+                  {{ end }}
+                </ul>
+                {{ end }}
+              </li>
               {{ end }}
             </ul>
           </div>
           {{ end }}
+
           {{ if .Params.research_interests }}
           <div class="mb-6">
             <h2 class="text-xl font-semibold text-text-primary dark:text-text-primary mb-2">Research Interests</h2>
