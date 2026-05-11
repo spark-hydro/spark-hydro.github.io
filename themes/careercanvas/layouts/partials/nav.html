@@ -128,7 +128,7 @@
         {{ end }}
         {{ if .HasChildren }}
           {{ range .Children }}
-            <a href="{{ .URL | relLangURL }}" class="block pl-6 py-1 text-sm text-text-tertiary dark:text-text-tertiary">{{ .Name }}</a>
+            <a href="{{ .URL | relLangURL }}" class="block pl-6 py-1 text-sm text-gray-700 dark:text-gray-200">{{ .Name }}</a>
           {{ end }}
         {{ end }}
       {{ end }}

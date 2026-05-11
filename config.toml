@@ -1,6 +1,6 @@
 # Hugo Site Configuration
 baseURL = "https://spark-hydro.github.io/"
-languageCode = "en-us"
+locale = "en-US"
 title = "iHydro M&D"
 theme = "careercanvas"
 defaultContentLanguage = "en"
@@ -83,7 +83,7 @@ enable_dynamic_colors = false
 name = "iHydro M&D Lab"
 firstName = "iHydro M&D Lab"
 # lastName = "Cordero"
-email = "seonggyu.park@ttu.com"
+email = "seonggyu.park@ttu.edu"
 profile_image = "/images/avatar.jpg"
 author = "iHydro M&D Research Group"
 

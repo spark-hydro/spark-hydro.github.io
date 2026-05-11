@@ -517,7 +517,7 @@ Several root params still look inherited or inconsistent:
 - `linkedin_text` still references Felipe text,
 - `calendly_url` still references a previous owner,
 - `og_image` still points to a previous branding asset,
-- `email` currently appears to be `seonggyu.park@ttu.com`, which looks suspicious relative to expected TTU convention.
+- `email` currently appears to be `seonggyu.park@ttu.edu`, which looks suspicious relative to expected TTU convention.
 
 These may create correctness, trust, and branding issues.
 

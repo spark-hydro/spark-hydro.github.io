@@ -14,10 +14,24 @@ url = "/team/"
 weight = 4
 
 
+[[main]]
+name = "Teaching"
+identifier = "teaching"
+weight = 5
+
+
 # [[main]]
-# name = "Teaching"
-# url = "/#teaching"
-# weight = 5
+# name = "Machine Learning"
+# parent = "teaching"
+# url = "/teaching/machine-learning/"
+# weight = 2
+
+[[main]]
+name = "Engineering Hydrology"
+parent = "teaching"
+url = "/teaching/engineering-hydrology/"
+weight = 1
+
 
 
 # [[main]]

@@ -1,0 +1,289 @@
+{{ define "main" }}
+<section class="pt-10 pb-16 bg-bg dark:bg-bg">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+<!-- Hero -->
+<div class="text-center mb-10">
+  {{ if .Params.badge }}
+  <div class="mb-6">
+    <span class="inline-flex items-center px-5 py-2 rounded-full text-sm font-medium border text-primary dark:text-white bg-primary/10 dark:bg-white/10 border-primary/30 dark:border-white/40 mt-6">
+      {{ .Params.badge }}
+    </span>
+  </div>
+  {{ end }}
+
+  <div class="max-w-5xl mx-auto">
+    <h1 class="text-4xl md:text-6xl font-bold leading-tight text-text-primary dark:text-text-primary mb-5">
+      {{ .Title }}
+    </h1>
+
+    {{ if .Params.subtitle }}
+    <p class="text-lg md:text-2xl text-text-secondary dark:text-text-secondary leading-relaxed max-w-4xl mx-auto">
+      {{ .Params.subtitle }}
+    </p>
+    {{ end }}
+  </div>
+</div>
+
+<!-- Unified quick facts card -->
+<div class="rounded-3xl border border-border-primary dark:border-border-primary bg-bg-secondary dark:bg-bg-tertiary p-8 md:p-10 mb-12">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+    {{ if or .Params.format .Params.credits }}
+    <div>
+      <div class="w-14 h-14 mx-auto mb-4 rounded-full flex items-center justify-center text-primary dark:text-white bg-primary/10 dark:bg-white/5">
+        <i class="fas fa-plus text-xl"></i>
+      </div>
+
+
+      <h2 class="text-lg font-semibold text-text-primary dark:text-white mb-3">Format</h2>
+      {{ if .Params.format }}
+      <p class="text-text-secondary dark:text-gray-200">{{ .Params.format }}</p>
+      {{ end }}
+      {{ if .Params.credits }}
+      <p class="text-text-secondary dark:text-gray-200 mt-2">{{ .Params.credits }}</p>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    {{ if or .Params.semester .Params.duration }}
+    <div>
+      <div class="w-14 h-14 mx-auto mb-4 rounded-full flex items-center justify-center text-primary dark:text-white bg-primary/10 dark:bg-white/5">
+        <i class="fas fa-calendar-alt text-xl"></i>
+      </div>
+      <h2 class="text-lg font-semibold text-text-primary dark:text-white mb-3">Semester</h2>
+      {{ if .Params.semester }}
+      <p class="text-text-secondary dark:text-gray-200">{{ .Params.semester }}</p>
+      {{ end }}
+      {{ if .Params.duration }}
+      <p class="text-text-secondary dark:text-gray-200 mt-2">{{ .Params.duration }}</p>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    {{ if .Params.prerequisites }}
+    <div>
+      <div class="w-14 h-14 mx-auto mb-4 rounded-full flex items-center justify-center text-primary dark:text-white bg-primary/10 dark:bg-white/5">
+        <i class="fas fa-check-circle text-xl"></i>
+      </div>
+      <h2 class="text-lg font-semibold text-text-primary dark:text-white mb-3">Prerequisites</h2>
+      <p class="text-text-secondary dark:text-gray-200">{{ .Params.prerequisites }}</p>
+    </div>
+    {{ end }}
+  </div>
+
+  {{ if .Params.syllabus_url }}
+  <div class="text-center mt-10">
+    <a href="{{ .Params.syllabus_url }}" target="_blank" rel="noopener"
+       class="inline-flex items-center px-6 py-3 rounded-xl font-semibold text-gray-800 dark:text-white border border-primary/40 dark:border-white/40 bg-primary/10 dark:bg-white/10 hover:bg-primary/20 dark:hover:bg-white/20 transition-colors shadow-lg mt-6">
+      <i class="fas fa-file-alt mr-3"></i>
+      Download Course Syllabus
+      <span class="ml-3">→</span>
+    </a>
+  </div>
+  {{ end }}
+</div>
+
+<!-- Learning outcomes -->
+{{ if .Params.learning_outcomes }}
+<div class="mb-12">
+  <h2 class="text-2xl md:text-3xl font-bold text-text-primary dark:text-text-primary mb-6">What Students Learn</h2>
+  <!-- <div class="rounded-3xl border border-border-primary dark:border-border-primary bg-bg-secondary dark:bg-bg-tertiary p-6 md:p-8"> -->
+    <ul class="list-disc pl-6 space-y-2 text-text-secondary dark:text-gray-200">
+      {{ range .Params.learning_outcomes }}
+      <li>{{ . }}</li>
+      {{ end }}
+    </ul>
+  <!-- </div> -->
+</div>
+{{ end }}
+
+    <!-- Overview -->
+    {{ if .Content }}
+    <div class="rounded-3xl border border-border-primary dark:border-border-primary bg-bg-secondary dark:bg-bg-tertiary p-8 md:p-10 mb-10">
+      <h2 class="text-2xl font-bold text-text-primary dark:text-text-primary mb-5">Course Overview</h2>
+      <div class="prose max-w-none prose-lg markdown-content dark:prose-invert prose-gray">
+        {{ .Content }}
+      </div>
+    </div>
+    {{ end }}
+
+    <!-- Learning outcomes -->
+    <!-- {{ if .Params.learning_outcomes }}
+    <div class="mb-10">
+      <h2 class="text-2xl font-bold text-text-primary dark:text-text-primary mb-5">What Students Learn</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {{ range .Params.learning_outcomes }}
+        <div class="rounded-2xl border border-border-primary dark:border-border-primary bg-bg-secondary dark:bg-bg-tertiary p-5">
+          <p class="text-text-secondary dark:text-text-secondary">{{ . }}</p>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }} -->
+
+    <!-- Gallery -->
+    {{ if .Params.photos }}
+    <div class="mb-10">
+      <h2 class="text-2xl font-bold text-text-primary dark:text-text-primary mb-5">
+        {{ .Params.photo_section_title | default "Course Gallery" }}
+      </h2>
+
+      <div class="rounded-3xl border border-border-primary dark:border-border-primary bg-bg-secondary dark:bg-bg-tertiary p-6">
+        <div id="teachingGallery" class="max-w-5xl mx-auto">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg"
+              style="height: 280px;"
+              >
+          <!-- <div class="relative overflow-hidden rounded-2xl shadow-lg" style="height: 520px;"> -->
+            {{ range $index, $photo := .Params.photos }}
+            <div class="teaching-slide absolute inset-0" style="opacity: {{ if eq $index 0 }}1{{ else }}0{{ end }}; transition: opacity 1.2s ease-in-out;">
+              <img src="{{ $photo.image }}" alt="Course photo {{ add $index 1 }}" class="absolute inset-0 w-full h-full object-cover">
+
+              {{ if $photo.caption }}
+              <div class="absolute inset-x-0 bottom-0 p-4 text-white" style="background: linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0));">
+                <p class="text-md md:text-base font-medium">{{ $photo.caption }}</p>
+              </div>
+              {{ end }}
+            </div>
+            {{ end }}                        
+          </div>
+
+          <div class="flex justify-center gap-3 mt-4">
+            {{ range $index, $photo := .Params.photos }}
+            <button
+              type="button"
+              class="teaching-dot block w-4 h-4 rounded-full border border-border-primary dark:border-white {{ if eq $index 0 }}bg-primary dark:bg-white{{ else }}bg-primary/40 dark:bg-white/40{{ end }}"
+              data-slide="{{ $index }}"
+              aria-label="Go to slide {{ add $index 1 }}">
+            </button>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+    {{ end }}
+
+    <!-- Resources -->
+    <!-- {{ if .Params.resources }}
+    <div>
+      <h2 class="text-2xl font-bold text-text-primary dark:text-text-primary mb-5">Resources</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {{ range .Params.resources }}
+        <a href="{{ .url }}" class="rounded-2xl border border-border-primary dark:border-border-primary bg-bg-secondary dark:bg-bg-tertiary p-5 block hover:shadow-md transition-shadow duration-200">
+          <div class="font-semibold text-text-primary dark:text-text-primary">{{ .title }}</div>
+          {{ if .description }}
+          <div class="text-sm text-text-secondary dark:text-text-secondary mt-1">{{ .description }}</div>
+          {{ end }}
+        </a>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }} -->
+
+
+    {{ if .Params.video_youtube }}
+    <div class="mb-10">
+      <h2 class="text-2xl font-bold text-text-primary dark:text-text-primary mb-5">Field Video</h2>
+
+      <div class="rounded-3xl border border-border-primary dark:border-border-primary bg-bg-secondary dark:bg-bg-tertiary p-6 md:p-8">
+        {{ if .Params.video_title }}
+        <h3 class="text-xl md:text-2xl font-bold text-text-primary dark:text-text-primary mb-3">
+          {{ .Params.video_title }}
+        </h3>
+        {{ end }}
+
+        {{ if .Params.video_caption }}
+        <p class="text-text-secondary dark:text-text-secondary mb-5 leading-relaxed">
+          {{ .Params.video_caption }}
+        </p>
+        {{ end }}
+
+        <div class="relative overflow-hidden rounded-2xl shadow-lg" style="padding-top: 56.25%;">
+          <iframe
+            src="{{ .Params.video_youtube }}"
+            title="{{ .Params.video_title | default "Course field video" }}"
+            class="absolute inset-0 w-full h-full"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+    {{ end }}
+
+
+
+  </div>
+</section>
+
+<style>
+  @media (min-width: 640px) {
+    #teachingGallery .relative.overflow-hidden.rounded-2xl.shadow-lg {
+      height: 380px !important;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    #teachingGallery .relative.overflow-hidden.rounded-2xl.shadow-lg {
+      height: 520px !important;
+    }
+  }
+</style>
+
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const gallery = document.getElementById('teachingGallery');
+  if (!gallery) return;
+
+  const slides = gallery.querySelectorAll('.teaching-slide');
+  const dots = document.querySelectorAll('.teaching-dot');
+  let currentIndex = 0;
+  let intervalId;
+
+  function showSlide(index) {
+    currentIndex = index;
+
+    slides.forEach((slide, i) => {
+      slide.style.opacity = (i === index) ? '1' : '0';
+    });
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('bg-primary', i === index);
+      dot.classList.toggle('bg-primary/40', i !== index);
+      dot.classList.toggle('dark:bg-white', i === index);
+      dot.classList.toggle('dark:bg-white/40', i !== index);
+    });
+  }
+
+  function nextSlide() {
+    const nextIndex = (currentIndex + 1) % slides.length;
+    showSlide(nextIndex);
+  }
+
+  function startAutoSlide() {
+    if (slides.length > 1) {
+      intervalId = setInterval(nextSlide, 4000);
+    }
+  }
+
+  function resetAutoSlide() {
+    clearInterval(intervalId);
+    startAutoSlide();
+  }
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', function () {
+      showSlide(index);
+      resetAutoSlide();
+    });
+  });
+
+  showSlide(0);
+  startAutoSlide();
+});
+</script>
+
+{{ end }}
