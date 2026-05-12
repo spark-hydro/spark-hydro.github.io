@@ -36,7 +36,7 @@ current_members:
     bio: "Undergraduate student in Environmental Engineering, trained in water quality and data anaylsis"
     email: "ashrabon@ttu.edu"
     read_more: "/team/aunjishu"
-    resume_url: /files/Resume-Aunjishu_Rahman_Shrabonti.pdf"
+    resume_url: /files/Resume-Aunjishu_Rahman_Shrabonti.pdf
     github: "https://github.com/aunjishurahman-droid"
     linkedin: "linkedin.com/in/aunjishu-rahman-shrabonti-5bb673326"
     
