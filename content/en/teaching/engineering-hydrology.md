@@ -7,7 +7,7 @@ credits: "3 Credits"
 semester: "Spring and Fall semesters"
 duration: "16 Weeks"
 prerequisites: "CE 3305 (Mechanics of Fluids) or equivalent"
-syllabus_url: "/files/machine-learning-syllabus.pdf"
+syllabus_url: "/files/CE3354_Spring2026_syllabus.pdf"
 
 photo_section_title: "Spring 26 Group Presentation Photo"
 photos:
