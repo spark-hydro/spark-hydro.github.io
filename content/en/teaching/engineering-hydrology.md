@@ -36,9 +36,11 @@ video_youtube: "https://www.youtube.com/embed/MHgkj1284q4"
 draft: false
 
 learning_outcomes:
-  - "Understand hydrologic processes and watershed response."
-  - "Apply engineering hydrology methods to real-world problems."
-  - "Interpret rainfall-runoff relationships and design metrics."
+ - Understand hydrologic processes and watershed response.
+ - Analyze rainfall, runoff, and streamflow data.
+ - Apply engineering hydrology methods to real-world design problems.
+ - Use tools such as HEC-HMS, Python, Excel, and GIS.
+ - Interpret results while considering uncertainty and practical constraints.
 
 resources:
   - title: "Syllabus"
