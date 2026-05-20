@@ -42,10 +42,11 @@ current_members:
     
   - name: "David Serrano Suarez"
     position: "Ph.D. Student"
-    photo: "/images/team/david.jpeg"
+    photo: "/images/team/david_square.jpg"
     bio: "PhD student in Water Resources Engineering, trained in Hydrological Modeling."
     email: "davidser@ttu.edu"
     read_more: "/team/david"
+    resume_url: "/files/David_Serrano_Suarez_CV.pdf"
     github: "https://github.com/JosephAuresy"
     linkedin: "https://www.linkedin.com/in/david-serrano-suarez/"
     google_scholar: "https://scholar.google.com/citations?user=apx8CncAAAAJ&hl=en"
