@@ -10,7 +10,7 @@ draft: false
 principal_investigator:
   name: "Seonggyu Park"
   title: "Assistant Professor of Hydrological Modeling"
-  photo: "/images/team/02.jpg"
+  photo: "/images/team/profile_photo.png"
   bio: "Dr. Seonggyu Park is the Principal Investigator (PI) of the iHydro M&D Lab at Texas Tech University. His research group develops integrated hydrological modeling frameworks to support sustainable water resources management under changing environmental conditions. Dr. Park’s work focuses on surface–groundwater interactions, uncertainty quantification, and data-driven modeling, with applications in produced water reuse, watershed management, and climate change impact assessment. He is passionate about advancing decision-support tools and mentoring the next generation of water resources engineers."
   education:
     - "Postdoc. Texas A&M AgriLife Research"
