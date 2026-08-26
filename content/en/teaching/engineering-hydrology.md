@@ -1,6 +1,6 @@
 ---
 title: "Engineering Hydrology"
-badge: "Fall 25, Spring 26 • CE3354"
+badge: "Fall 25, Spring 26, Fall 26 • CE3354"
 subtitle: "Analysis and design methods related to the occurrence and distribution of surface and groundwater, precipitation, infiltration, runoff, and frequency analysis."
 format: "In-person"
 credits: "3 Credits"
@@ -28,7 +28,7 @@ photos:
   - image: "/images/teaching/eh/spring26group06-01.jpg"
     caption: "Spring 2026 group 06" 
 
-video_title: "Group 04 Study Site Visit and Drone Footage"
+video_title: "Group 04 Study Site Visit and Drone Footage (Spring 26)"
 video_caption: "Recorded by Mehevec Dylan from Group 04 during his visit to the study site, this video captures site conditions and key physical features that supported their project investigation."
 video_youtube: "https://www.youtube.com/embed/MHgkj1284q4"
 
