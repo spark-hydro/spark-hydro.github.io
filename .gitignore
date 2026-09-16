@@ -21,3 +21,4 @@ desktop.ini
 .hugo_build.lock
 .env.*
 config.local.toml
+.Rproj.user
