@@ -146,7 +146,7 @@ make_cite <- function(authors,	year,	title,	journal = NULL,	volume = NULL,
 ```
 
 ```{r}
-PDF <- FALSE # Set to TRUE when rendering to PDF via pagedown::chrome_print('spark-cv.Rmd', 'spark-cv.pdf')
+PDF <- TRUE # Set to TRUE when rendering to PDF via pagedown::chrome_print('spark-cv.Rmd', 'spark-cv.pdf')
 if(PDF) {
   header <- '
   <a href="#toc" class="icon-block2">
@@ -219,20 +219,20 @@ cat(header)
 </div>
 
 <!-- Online -->
-<div class="item3">
-<a href="https://github.com/spark-hydro/spark-hydro.github.io/raw/main/spark-cv/spark-cv.pdf" class="icon-block">
-<img class="top_aligned_image" src="cv_pdf.svg">
-<span class="caption">DOWNLOAD PDF</span>
-</a>
-</div>
+<!-- <div class="item3"> -->
+<!-- <a href="https://github.com/spark-hydro/spark-hydro.github.io/raw/main/spark-cv/spark-cv.pdf" class="icon-block"> -->
+<!-- <img class="top_aligned_image" src="cv_pdf.svg"> -->
+<!-- <span class="caption">DOWNLOAD PDF</span> -->
+<!-- </a> -->
+<!-- </div> -->
 
 <!-- PDF -->
-<!-- <div class="item3">
+<div class="item3">
 <a href="https://spark-hydro.github.io/spark-cv/" class="icon-block">
 <img class="top_aligned_image" src="cv_online.svg">
 <span class="caption">VIEW ONLINE</span>
 </a>
-</div> -->
+</div>
 
 </div>
 
